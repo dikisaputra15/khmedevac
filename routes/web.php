@@ -49,8 +49,8 @@ Route::get('/redirect-to-wp', function (Illuminate\Http\Request $request) {
 
     // Validasi agar hanya dua domain ini yang boleh
     $allowedTargets = [
-        'incident-tracking' => 'https://myanmar.concordreview.com/incident-tracking-dashboard/',
-        'dashboard' => 'https://myanmar.concordreview.com/indonesia-dashboard-w900/',
+        'incident-tracking' => 'https://Cambodia.concordreview.com/incident-tracking-dashboard/',
+        'dashboard' => 'https://Cambodia.concordreview.com/indonesia-dashboard-w900/',
     ];
 
     if (!isset($allowedTargets[$target])) {

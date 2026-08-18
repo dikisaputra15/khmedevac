@@ -3189,7 +3189,7 @@
     }
 
     if (pos.other) {
-      // Secondary cursor, shown when on a 'jump' in bi-directional text
+      // secondary cursor, shown when on a 'jump' in bi-directional text
       var otherCursor = output.appendChild(elt("div", "\u00a0", "CodeMirror-cursor CodeMirror-secondarycursor"));
       otherCursor.style.display = "";
       otherCursor.style.left = pos.other.left + "px";

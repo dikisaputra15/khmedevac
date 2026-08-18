@@ -112,36 +112,36 @@
             <select class="form-control" name="facility_level">
 
                 <optgroup label="Government">
-                    <option value="Tertiary"
-                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Tertiary' ? 'selected' : '' }}>
-                        Tertiary
+                    <option value="National (CPA3+)"
+                        {{ old('facility_level', $hospital->facility_level ?? '') == 'National (CPA3+)' ? 'selected' : '' }}>
+                        National (CPA3+)
                     </option>
 
-                    <option value="Secondary"
-                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Secondary' ? 'selected' : '' }}>
-                        Secondary
+                    <option value="Provincial (CPA3) / District (CPA2)"
+                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Provincial (CPA3) / District (CPA2)' ? 'selected' : '' }}>
+                        Provincial (CPA3) / District (CPA2)
                     </option>
 
-                    <option value="Primary"
-                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Primary' ? 'selected' : '' }}>
-                        Primary
+                    <option value="District (CPA1) / Health Center (MPA)"
+                        {{ old('facility_level', $hospital->facility_level ?? '') == 'District (CPA1) / Health Center (MPA)' ? 'selected' : '' }}>
+                        District (CPA1) / Health Center (MPA)
                     </option>
                 </optgroup>
 
                 <optgroup label="Private">
-                    <option value="Large Private"
-                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Large Private' ? 'selected' : '' }}>
-                        Large Private
+                    <option value="Large Hospital"
+                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Large Hospital' ? 'selected' : '' }}>
+                        Large Hospital
                     </option>
 
-                    <option value="Medium Private"
-                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Medium Private' ? 'selected' : '' }}>
-                        Medium Private
+                    <option value="Medium Hospital / Polyclinic"
+                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Medium Hospital / Polyclinic' ? 'selected' : '' }}>
+                        Medium Hospital / Polyclinic
                     </option>
 
-                    <option value="Small Private"
-                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Small Private' ? 'selected' : '' }}>
-                        Small Private
+                    <option value="Small Hospital"
+                        {{ old('facility_level', $hospital->facility_level ?? '') == 'Small Hospital' ? 'selected' : '' }}>
+                        Small Hospital
                     </option>
                 </optgroup>
 
@@ -180,15 +180,15 @@
 
         @php
             $governmentIcons = [
-                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png', 'label' => 'Tertiary'],
-                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png', 'label' => 'Secondary'],
-                ['url' => 'https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png', 'label' => 'Primary'],
+                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png', 'label' => 'National (CPA3+)'],
+                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png', 'label' => 'Provincial (CPA3) / District (CPA2)'],
+                ['url' => 'https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png', 'label' => 'District (CPA1) / Health Center (MPA)'],
             ];
 
             $privateIcons = [
-                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png', 'label' => 'Large Private'],
-                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png', 'label' => 'Medium Private'],
-                ['url' => 'https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png', 'label' => 'Small Private'],
+                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png', 'label' => 'Large Hospital'],
+                ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png', 'label' => 'Medium Hospital / Polyclinic'],
+                ['url' => 'https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png', 'label' => 'Small Hospital'],
             ];
         @endphp
 

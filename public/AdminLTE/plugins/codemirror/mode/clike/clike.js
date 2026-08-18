@@ -737,12 +737,12 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
                     "dFdx dFdy fwidth " +
                     "noise1 noise2 noise3 noise4"),
     atoms: words("true false " +
-                "gl_FragColor gl_SecondaryColor gl_Normal gl_Vertex " +
+                "gl_FragColor gl_secondaryColor gl_Normal gl_Vertex " +
                 "gl_MultiTexCoord0 gl_MultiTexCoord1 gl_MultiTexCoord2 gl_MultiTexCoord3 " +
                 "gl_MultiTexCoord4 gl_MultiTexCoord5 gl_MultiTexCoord6 gl_MultiTexCoord7 " +
                 "gl_FogCoord gl_PointCoord " +
                 "gl_Position gl_PointSize gl_ClipVertex " +
-                "gl_FrontColor gl_BackColor gl_FrontSecondaryColor gl_BackSecondaryColor " +
+                "gl_FrontColor gl_BackColor gl_FrontsecondaryColor gl_BacksecondaryColor " +
                 "gl_TexCoord gl_FogFragCoord " +
                 "gl_FragCoord gl_FrontFacing " +
                 "gl_FragData gl_FragDepth " +

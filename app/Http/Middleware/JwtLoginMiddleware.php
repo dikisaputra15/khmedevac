@@ -27,7 +27,7 @@ class JwtLoginMiddleware
                 $decoded = JWT::decode($token, new Key($secret, 'HS256'));
 
                 $validIssuers = [
-                    'https://myanmar.concordreview.com',
+                    'https://Cambodia.concordreview.com',
                     'https://mm.concordcmt.com',
                 ];
 

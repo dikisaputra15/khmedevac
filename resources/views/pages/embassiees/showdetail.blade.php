@@ -143,7 +143,7 @@
                         {{ $embassy->location ?? '-' }},
                         {{ $city->city ?? '-' }},
                         {{ $district->district ?? '-' }},
-                        {{ $province->provinces_region ?? '-' }}, Myanmar
+                        {{ $province->provinces_region ?? '-' }}, Cambodia
                     </p>
                     <p>
                         <strong>Latitude:</strong> {{ $embassy->latitude }}

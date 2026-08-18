@@ -153,37 +153,37 @@
                     <label>National Police (HQ)</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'State / Region Police Command' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Provincial Police Commissariat' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="State / Region Police Command"
+                        value="Provincial Police Commissariat"
                         data-icon="{{ asset('images/Layer2.png') }}"
-                        {{ $police->category == 'State / Region Police Command' ? 'checked' : '' }}>
+                        {{ $police->category == 'Provincial Police Commissariat' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer2.png') }}" width="16">
-                    <label>State / Region Police Command</label>
+                    <label>Provincial Police Commissariat</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'District Police Command' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Municipality Police Inspectorate' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="District Police Command"
+                        value="Municipality Police Inspectorate"
                         data-icon="{{ asset('images/Layer3.png') }}"
-                        {{ $police->category == 'District Police Command' ? 'checked' : '' }}>
+                        {{ $police->category == 'Municipality Police Inspectorate' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer3.png') }}" width="16">
-                    <label>District Police Command</label>
+                    <label>Municipality Police Inspectorate</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'Township Police Station' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Commune Police Post' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="Township Police Station"
+                        value="Commune Police Post"
                         data-icon="{{ asset('images/Layer4.png') }}"
-                        {{ $police->category == 'Township Police Station' ? 'checked' : '' }}>
+                        {{ $police->category == 'Commune Police Post' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer4.png') }}" width="16">
-                    <label>Township Police Station</label>
+                    <label>Commune Police Post</label>
                 </div>
 
             </div>

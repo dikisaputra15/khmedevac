@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Myanmar Lab Classification</title>
+    <title>Cambodia Lab Classification</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap 5 CSS CDN -->
@@ -49,13 +49,13 @@
             <tr>
                 <td class="type-cell">Type A</td>
                 <td>
-                    Tertiary Hospitals<br>
-                    Secondary Level Hospital (State/Regional Hospitals)
+                    National (CPA3+) Hospitals<br>
+                    Provincial (CPA3) / District (CPA2) Level Hospital (State/Regional Hospitals)
                 </td>
             </tr>
             <tr>
                 <td class="type-cell">Type B</td>
-                <td>Secondary Level Hospital (District Hospitals)</td>
+                <td>Provincial (CPA3) / District (CPA2) Level Hospital (District Hospitals)</td>
             </tr>
             <tr>
                 <td class="type-cell">Type C</td>

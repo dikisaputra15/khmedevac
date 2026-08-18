@@ -87,7 +87,7 @@ You can change the style of the card by adding any of the contextual classes.
   <div class="col-sm-3">
     <div class="card card-secondary">
       <div class="card-header">
-        <h3 class="card-title">Secondary Card Example</h3>
+        <h3 class="card-title">secondary Card Example</h3>
       </div>
       <div class="card-body">
         The body of the card
@@ -197,7 +197,7 @@ You can change the style of the card by adding any of the contextual classes.
   <div class="col-sm-3">
     <div class="card card-outline card-secondary">
       <div class="card-header">
-        <h3 class="card-title">Secondary Card Example</h3>
+        <h3 class="card-title">secondary Card Example</h3>
       </div>
       <div class="card-body">
         The body of the card
@@ -307,7 +307,7 @@ You can change the style of the card by adding any of the contextual classes.
   <div class="col-sm-3">
     <div class="card bg-secondary">
       <div class="card-header">
-        <h3 class="card-title">Secondary Card Example</h3>
+        <h3 class="card-title">secondary Card Example</h3>
       </div>
       <div class="card-body">
         The body of the card
@@ -417,7 +417,7 @@ You can change the style of the card by adding any of the contextual classes.
   <div class="col-sm-3">
     <div class="card bg-gradient-secondary">
       <div class="card-header">
-        <h3 class="card-title">Secondary Card Example</h3>
+        <h3 class="card-title">secondary Card Example</h3>
       </div>
       <div class="card-body">
         The body of the card

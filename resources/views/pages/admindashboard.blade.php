@@ -2,7 +2,7 @@
 
 @section('title', 'Dashboard')
 
-@section('page-title', 'Myanmar Crisis Management Tools')
+@section('page-title', 'Cambodia Crisis Management Tools')
 
 @push('styles')
 
@@ -440,13 +440,13 @@
                                 <div class="hospital-item">
                                   <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level66Modal">
                                     <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital-pin-red.png" style="width:24px; height:24px;">
-                                    <small>Tertiary</small>
+                                    <small>National (CPA3+)</small>
                                   </button>
                                 </div>
                                 <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level55Modal">
                                       <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png" style="width:24px; height:24px;">
-                                      <small>Large Private</small>
+                                      <small>Large Hospital</small>
                                     </button>
                                   </div>
                               </div>
@@ -459,13 +459,13 @@
                                   <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level44Modal">
                                       <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-purple.png" style="width:24px; height:24px;">
-                                      <small>Secondary</small>
+                                      <small>Provincial (CPA3) / District (CPA2)</small>
                                     </button>
                                   </div>
                                   <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level33Modal">
                                       <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png" style="width:24px; height:24px;">
-                                      <small>Medium Private</small>
+                                      <small>Medium Hospital / Polyclinic</small>
                                     </button>
                                   </div>
                               </div>
@@ -484,7 +484,7 @@
                                    <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level11Modal">
                                         <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:24px; height:24px;">
-                                        <small>Small Private</small>
+                                        <small>Medium Hospital / Polyclinic</small>
                                     </button>
                                     </div>
                                 </div>
@@ -506,19 +506,19 @@
                                 <div class="hospital-item">
                                     <button class="btn p-1 text-start w-100" data-bs-toggle="modal" data-bs-target="#police2Modal">
                                         <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                                        <small>State / Region Police Command</small>
+                                        <small>Provincial Police Commissariat</small>
                                     </button>
                                 </div>
                                 <div class="hospital-item">
                                     <button class="btn p-1 text-start w-100" data-bs-toggle="modal" data-bs-target="#police3Modal">
                                          <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                                        <small>District Police Command</small>
+                                        <small>Municipality Police Inspectorate</small>
                                     </button>
                                 </div>
                                 <div class="hospital-item">
                                     <button class="btn p-1 text-start w-100" data-bs-toggle="modal" data-bs-target="#police4Modal">
                                         <img src="{{ asset('images/Layer4.png') }}" style="width:12px; height:12px;">
-                                        <small>Township Police Station</small>
+                                        <small>Commune Police Post</small>
                                     </button>
                                 </div>
                             </div>
@@ -653,7 +653,7 @@
            <b>Subordinate department commander rank:</b> Police Brigadier General / Police Colonel level
         </p>
         <p class="p-modal text-justify">
-           Myanmar Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
+           Cambodia Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
         </p>
         <p class="p-modal text-justify">
             Headquarters functions:
@@ -696,10 +696,10 @@
             <b>Led by:</b> Police Brigadier General / Police Colonel level officer, depend on the size, location, and operational importance of the State or Region.
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Myanmar's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
+            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Cambodia's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
         </p>
         <p class="p-modal text-justify">
-            Myanmar has seven States and seven Regions.
+            Cambodia has seven States and seven Regions.
         </p>
         <ul>
             <li><b>States:</b> Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, and Shan State.</li>
@@ -771,7 +771,7 @@
             <b>Responsibilities, role, and functions:</b> The Township Police Force supervises Police Stations, Police Posts, and Police Guard Posts; coordinates patrols; receives crime and incident reports; supports investigations; manages local public-order operations; deploys personnel to checkpoints or guard duties; and reports operational developments to the District Police Force. It is the key command layer for managing police presence across both urban and rural areas.
         </p>
         <p class="p-modal text-justify">
-            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Myanmar Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
+            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Cambodia Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
         </p>
         <ul>
             <li>
@@ -925,7 +925,7 @@
       <div class="modal-header">
          <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">SMALL PRIVATE HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Medium Hospital / Polyclinic HOSPITAL</h5>
          </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -934,10 +934,10 @@
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Small Private Hospital is a low-capacity facility offering basic inpatient and outpatient services, often functioning similarly to an expanded clinic. It primarily supports primary-level care.
+                A Medium Hospital / Polyclinic Hospital is a low-capacity facility offering basic inpatient and outpatient services, often functioning similarly to an expanded clinic. It primarily supports primary-level care.
             </p>
             <p class="text-justify">
-                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Myanmar are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphamyanmar.org/" target="_blank"> Myanmar Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
+                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Cambodia are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphaCambodia.org/" target="_blank"> Cambodia Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1012,7 +1012,7 @@
                 <ul>
                     <li>Provide first-line hospital care</li>
                     <li>Manage common medical conditions</li>
-                    <li>Refer patients to secondary hospitals</li>
+                    <li>Refer patients to Provincial (CPA3) / District (CPA2) hospitals</li>
                 </ul>
             </p>
             <h6 class="fw-bold">
@@ -1126,19 +1126,19 @@
                 </ul>
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
+                Cambodia GOVERNMENT HEALTH INSURANCE
             </h5>
             <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
+                Cambodia does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Cambodia, which provides the following cover:
                 <ul>
                     <li>Restricted primarily to formal sector workers</li>
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
+                As a result, a significant proportion of the population in Cambodia continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
+                <b>Social Security Scheme (SSS) Cambodia</b>
             </h6>
             <p class="text-justify">
                 SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
@@ -1177,7 +1177,7 @@
                 <b>Current role</b>
             </h6>
             <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
+                The Social Security Scheme is Cambodia’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -1190,7 +1190,7 @@
       <div class="modal-header">
          <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">MEDIUM PRIVATE HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Medium Hospital / Polyclinic HOSPITAL</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -1199,10 +1199,10 @@
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Medium Private Hospital is a moderate-capacity facility providing general and selected specialist services. It primarily supports secondary-level care, managing common and moderately complex conditions.
+                A Medium Hospital / Polyclinic Hospital is a moderate-capacity facility providing general and selected specialist services. It primarily supports Provincial (CPA3) / District (CPA2)-level care, managing common and moderately complex conditions.
             </p>
             <p class="text-justify">
-                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Myanmar are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphamyanmar.org/" target="_blank">Myanmar Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
+                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Cambodia are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphaCambodia.org/" target="_blank">Cambodia Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1258,19 +1258,19 @@
       <div class="modal-header">
          <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-purple.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">SECONDARY HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Provincial (CPA3) / District (CPA2) HOSPITAL</h5>
          </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                General Hospital (Secondary - At the Regional / State or District-Level)
+                General Hospital (Provincial (CPA3) / District (CPA2) - At the Regional / State or District-Level)
             </h5>
             <h6 class="fw-bold">
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Secondary-Level General Hospital in Myanmar refers to general hospitals located outside major cities, typically at the state/regional or district level. These hospitals provide broad multi-specialty services but do not possess full tertiary-level subspecialty capability.
+                A Provincial (CPA3) / District (CPA2)-Level General Hospital in Cambodia refers to general hospitals located outside major cities, typically at the state/regional or district level. These hospitals provide broad multi-specialty services but do not possess full National (CPA3+)-level subspecialty capability.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1279,7 +1279,7 @@
                 <ul>
                     <li>Regional referral centers for township and station hospitals</li>
                     <li>Provide multi-specialty care for moderate to complex conditions</li>
-                    <li>Stabilize and refer advanced cases to tertiary hospitals</li>
+                    <li>Stabilize and refer advanced cases to National (CPA3+) hospitals</li>
                     <li>Support regional healthcare delivery and workforce training</li>
                 </ul>
             </p>
@@ -1324,16 +1324,16 @@
                 </ul>
             </p>
             <p class="text-justify">
-                <b><U>Note:</u></b> A General Hospital is classified as Secondary when it is a regional (not national) referral center, has limited subspecialty coverage, and lacks the full advanced capabilities of tertiary hospitals.
+                <b><U>Note:</u></b> A General Hospital is classified as Provincial (CPA3) / District (CPA2) when it is a regional (not national) referral center, has limited subspecialty coverage, and lacks the full advanced capabilities of National (CPA3+) hospitals.
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                Regional / State Hospital (Secondary)
+                Regional / State Hospital (Provincial (CPA3) / District (CPA2))
             </h5>
             <h6 class="fw-bold">
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Regional/State Hospital is a core secondary-level facility by definition in Myanmar’s health system. It is designed to function as the main referral hospital in a state or region, providing expanded clinical services beyond district level.
+                A Regional/State Hospital is a core Provincial (CPA3) / District (CPA2)-level facility by definition in Cambodia’s health system. It is designed to function as the main referral hospital in a state or region, providing expanded clinical services beyond district level.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1380,13 +1380,13 @@
                 </ul>
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                District Hospital (Secondary)
+                District Hospital (Provincial (CPA3) / District (CPA2))
             </h5>
             <h6 class="fw-bold">
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A District Hospital classified as a Secondary facility represents an upgraded district-level facility with expanded services and capacity, and is an intermediate referral center.
+                A District Hospital classified as a Provincial (CPA3) / District (CPA2) facility represents an upgraded district-level facility with expanded services and capacity, and is an intermediate referral center.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1430,22 +1430,22 @@
                 </ul>
             </p>
             <p class="text-justify">
-                <b><u>Note:</u></b> A District Hospital is classified as Secondary when it has higher bed capacity, expanded clinical services, and a defined referral role for surrounding township hospitals.
+                <b><u>Note:</u></b> A District Hospital is classified as Provincial (CPA3) / District (CPA2) when it has higher bed capacity, expanded clinical services, and a defined referral role for surrounding township hospitals.
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
+                Cambodia GOVERNMENT HEALTH INSURANCE
             </h5>
             <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
+                Cambodia does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Cambodia, which provides the following cover:
                 <ul>
                     <li>Restricted primarily to formal sector workers</li>
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
+                As a result, a significant proportion of the population in Cambodia continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
+                <b>Social Security Scheme (SSS) Cambodia</b>
             </h6>
             <p class="text-justify">
                 SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
@@ -1484,7 +1484,7 @@
                 <b>Current role</b>
             </h6>
             <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
+                The Social Security Scheme is Cambodia’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -1497,7 +1497,7 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">LARGE PRIVATE HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Large Hospital HOSPITAL</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -1506,10 +1506,10 @@
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Large Private Hospital in Myanmar is a high-capacity, multi-specialty facility that provides comprehensive secondary to limited tertiary-level care. These hospitals are typically located in major urban centers and are equipped with advanced medical technology and a wide range of specialist services.
+                A Large Hospital Hospital in Cambodia is a high-capacity, multi-specialty facility that provides comprehensive Provincial (CPA3) / District (CPA2) to limited National (CPA3+)-level care. These hospitals are typically located in major urban centers and are equipped with advanced medical technology and a wide range of specialist services.
             </p>
             <p class="text-justify">
-                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Myanmar are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphamyanmar.org/" target="_blank">Myanmar Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
+                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Cambodia are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphaCambodia.org/" target="_blank">Cambodia Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1518,7 +1518,7 @@
                 <ul>
                     <li>Provide advanced diagnostic and therapeutic services across multiple specialties</li>
                     <li>Function as major private referral centers for complex cases</li>
-                    <li>Offer an alternative to public tertiary hospitals for high-end care</li>
+                    <li>Offer an alternative to public National (CPA3+) hospitals for high-end care</li>
                 </ul>
             </p>
             <h6 class="fw-bold">
@@ -1570,26 +1570,26 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital-pin-red.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">Tertiary Hospital</h5>
+            <h5 class="modal-title" id="disclaimerLabel">National (CPA3+) Hospital</h5>
         </div>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
             <p class="text-justify">
-                A Tertiary Public Hospital in Myanmar represents the highest level of care, typically consisting of major city General Hospitals, Teaching Hospitals, and Specialist Hospitals located in key urban centers including Yangon, Mandalay, and Nay Pyi Taw. These hospitals are national referral centers, managing the most complex and specialized medical conditions while also being hubs for medical education and research.
-                However, a General Hospital is a hospital type rather than a fixed level of care, and is categorized as being either Secondary or Tertiary depending on its bed capacity, clinical capability, specialist, and subspecialist availability, and referral role.
-                Tertiary General Hospitals are typically large facilities (above ≈500 beds) with full subspecialty coverage, advanced diagnostics (e.g., MRI, CT, specialized laboratories), and the ability to perform complex procedures including cardiac or neurosurgery. Tertiary General Hospitals are national referral centers and are mostly located in major cities, including Yangon, Mandalay, and Nay Pyi Taw.
-                In contrast, Secondary General Hospitals are usually smaller (≈50 – 500 beds), provide core specialties with limited subspecialty, and manage moderate-complexity cases while referring advanced cases upward. Secondary General Hospitals typically are regional referral centers and are commonly located at the state/regional or district level.
-                Consistent with Ministry of Health and Sports (MOHS) guidance, classification is determined by service capability and referral function, not by the hospital name itself. A General Hospital is classified as Tertiary when it operates as a high-capability national referral center, and Secondary when it is operating as a regional-level facility with more limited scope of care.
+                A National (CPA3+) Public Hospital in Cambodia represents the highest level of care, typically consisting of major city General Hospitals, Teaching Hospitals, and Specialist Hospitals located in key urban centers including Yangon, Mandalay, and Nay Pyi Taw. These hospitals are national referral centers, managing the most complex and specialized medical conditions while also being hubs for medical education and research.
+                However, a General Hospital is a hospital type rather than a fixed level of care, and is categorized as being either Provincial (CPA3) / District (CPA2) or National (CPA3+) depending on its bed capacity, clinical capability, specialist, and subspecialist availability, and referral role.
+                National (CPA3+) General Hospitals are typically large facilities (above ≈500 beds) with full subspecialty coverage, advanced diagnostics (e.g., MRI, CT, specialized laboratories), and the ability to perform complex procedures including cardiac or neurosurgery. National (CPA3+) General Hospitals are national referral centers and are mostly located in major cities, including Yangon, Mandalay, and Nay Pyi Taw.
+                In contrast, Provincial (CPA3) / District (CPA2) General Hospitals are usually smaller (≈50 – 500 beds), provide core specialties with limited subspecialty, and manage moderate-complexity cases while referring advanced cases upward. Provincial (CPA3) / District (CPA2) General Hospitals typically are regional referral centers and are commonly located at the state/regional or district level.
+                Consistent with Ministry of Health and Sports (MOHS) guidance, classification is determined by service capability and referral function, not by the hospital name itself. A General Hospital is classified as National (CPA3+) when it operates as a high-capability national referral center, and Provincial (CPA3) / District (CPA2) when it is operating as a regional-level facility with more limited scope of care.
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                General Hospitals (Tertiary - Major City)
+                General Hospitals (National (CPA3+) - Major City)
             </h5>
             <h6 class="fw-bold">
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Major City General Hospital is a large, multi-specialty tertiary hospital located in major urban centers including Yangon, Mandalay, and Nay Pyi Taw. It provides comprehensive clinical services across all major disciplines and functions as a national referral center, managing a wide spectrum of complex medical and surgical cases.
+                A Major City General Hospital is a large, multi-specialty National (CPA3+) hospital located in major urban centers including Yangon, Mandalay, and Nay Pyi Taw. It provides comprehensive clinical services across all major disciplines and functions as a national referral center, managing a wide spectrum of complex medical and surgical cases.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1624,7 +1624,7 @@
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Advanced Tertiary Services </strong>
+                        <strong>Advanced National (CPA3+) Services </strong>
                         <ul>
                             <li>Organ transplantation (in selected centers)</li>
                             <li>Cardiac surgery and catheterization laboratories</li>
@@ -1651,13 +1651,13 @@
                 </ul>
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                Teaching Hospital (Tertiary)
+                Teaching Hospital (National (CPA3+))
             </h5>
             <h6 class="fw-bold">
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Teaching Hospital is a tertiary-level hospital formally affiliated with medical universities, and is a center for medical education, specialist training, and clinical research. Teaching hospitals provide highly specialized care while simultaneously training undergraduate and postgraduate medical personnel.
+                A Teaching Hospital is a National (CPA3+)-level hospital formally affiliated with medical universities, and is a center for medical education, specialist training, and clinical research. Teaching hospitals provide highly specialized care while simultaneously training undergraduate and postgraduate medical personnel.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1685,7 +1685,7 @@
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Advanced Tertiary Services </strong>
+                        <strong>Advanced National (CPA3+) Services </strong>
                         <ul>
                             <li>Highly specialized procedures (e.g., complex oncology, neurosurgery)<li>
                             <li>Multidisciplinary care teams</li>
@@ -1710,16 +1710,16 @@
                 </ul>
             </p>
             <p class="text-justify">
-                <b><u>Note:</u></b> Teaching Hospitals are inherently tertiary due to their academic function, full specialist coverage, and role in national referral and training systems.
+                <b><u>Note:</u></b> Teaching Hospitals are inherently National (CPA3+) due to their academic function, full specialist coverage, and role in national referral and training systems.
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                Specialist Hospital (Tertiary)
+                Specialist Hospital (National (CPA3+))
             </h5>
             <h6 class="fw-bold">
                 <b>Overview</b>
             </h6>
             <p class="text-justify">
-                A Specialist Hospital is a tertiary-level facility focused on a specific field of medicine, including cardiology, orthopedics, oncology, or infectious diseases. Specialist hospitals provide highly specialized and advanced care within their domain and act as national referral centers for specific conditions.
+                A Specialist Hospital is a National (CPA3+)-level facility focused on a specific field of medicine, including cardiology, orthopedics, oncology, or infectious diseases. Specialist hospitals provide highly specialized and advanced care within their domain and act as national referral centers for specific conditions.
             </p>
             <h6 class="fw-bold">
                 <b>Role</b>
@@ -1750,7 +1750,7 @@
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Advanced Tertiary Services </strong>
+                        <strong>Advanced National (CPA3+) Services </strong>
                         <ul>
                             <li>Highly specialized procedures within the field</li>
                             <li>Advanced disease-specific treatment protocols</li>
@@ -1774,22 +1774,22 @@
                 </ul>
             </p>
             <p class="text-justify">
-                <b><u>Note:</u></b> Specialist Hospitals are classified as Tertiary due to their highly specialized capability, advanced procedures, and national referral role, even though their scope is narrower than general hospitals.
+                <b><u>Note:</u></b> Specialist Hospitals are classified as National (CPA3+) due to their highly specialized capability, advanced procedures, and national referral role, even though their scope is narrower than general hospitals.
             </p>
             <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
+                Cambodia GOVERNMENT HEALTH INSURANCE
             </h5>
             <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
+                Cambodia does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Cambodia, which provides the following cover:
                 <ul>
                     <li>Restricted primarily to formal sector workers</li>
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
+                As a result, a significant proportion of the population in Cambodia continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
+                <b>Social Security Scheme (SSS) Cambodia</b>
             </h6>
             <p class="text-justify">
                 SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
@@ -1828,7 +1828,7 @@
                 <b>Current role</b>
             </h6>
             <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
+                The Social Security Scheme is Cambodia’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -1893,7 +1893,7 @@ document.addEventListener('change', function(e) {
 
 <script>    // --- Map Initialization ---
     const map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 21.9162, lng: 95.9560 },
+        center: { lat: 12.5657, lng: 104.9910 },
         zoom: 6,
         mapTypeId: 'roadmap',
         mapTypeControl: true,
@@ -2623,7 +2623,7 @@ document.addEventListener('change', function(e) {
                         ${item.address || 'N/A'}
                         ${item.city_name ? ', ' + item.city_name : ''}
                         ${item.district_name ? ', ' + item.district_name : ''}
-                        ${item.province_name ? ', ' + item.province_name : ''}, Myanmar <br>
+                        ${item.province_name ? ', ' + item.province_name : ''}, Cambodia <br>
                     <strong>Website:</strong> ${item.website || 'N/A'} <br>
                 `;
             } else if (item.name) {
@@ -2637,7 +2637,7 @@ document.addEventListener('change', function(e) {
                         ${item.address || 'N/A'}
                         ${item.city ? ', ' + item.city : ''}
                         ${item.district ? ', ' + item.district : ''}
-                        ${item.provinces_region ? ', ' + item.provinces_region : ''}, Myanmar <br>
+                        ${item.provinces_region ? ', ' + item.provinces_region : ''}, Cambodia <br>
                 `;
             } else if (item.name_police) {
                 itemName = item.name_police;
@@ -2649,7 +2649,7 @@ document.addEventListener('change', function(e) {
                         ${item.location || 'N/A'}
                         ${item.city_name ? ', ' + item.city_name : ''}
                         ${item.district_name ? ', ' + item.district_name : ''}
-                        ${item.province_name ? ', ' + item.province_name : ''}, Myanmar <br>
+                        ${item.province_name ? ', ' + item.province_name : ''}, Cambodia <br>
                     <strong>Phone:</strong> ${item.telephone || 'N/A'}<br>
                     <strong>Fax:</strong> ${item.fax || 'N/A'}<br>
                     <strong>Email:</strong> ${item.email || 'N/A'}<br>
@@ -2665,7 +2665,7 @@ document.addEventListener('change', function(e) {
                         ${item.address || 'N/A'}
                         ${item.city ? ', ' + item.city : ''}
                         ${item.district ? ', ' + item.district : ''}
-                        ${item.provinces_region ? ', ' + item.provinces_region : ''}, Myanmar <br>
+                        ${item.provinces_region ? ', ' + item.provinces_region : ''}, Cambodia <br>
                     <strong>Phone:</strong> ${item.telephone || 'N/A'}<br>
                     <strong>Fax:</strong> ${item.fax || 'N/A'}<br>
                     <strong>Email:</strong> ${item.email || 'N/A'}<br>
@@ -3019,7 +3019,7 @@ document.addEventListener('change', function(e) {
 
                     <hr>
                     <button id="resetMapFilter"
-                            class="btn btn-sm btn-secondary w-100"
+                            class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) w-100"
                             style="margin-top:auto;">
                         Reset All
                     </button>
@@ -3250,4 +3250,3 @@ setTimeout(() => {
 </script>
 
 @endpush
-

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title','Embassiees')
-@section('page-title', 'Myanmar Embassiees')
+@section('page-title', 'Cambodia Embassiees')
 
 @push('styles')
 
@@ -298,7 +298,7 @@
 <script>
 // === Inisialisasi Peta ===
 const map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 19.7633, lng: 96.0785 },
+    center: { lat: 12.5657, lng: 104.9910 },
     zoom: 6,
     mapTypeId: 'roadmap',
     mapTypeControl: true,
@@ -826,7 +826,7 @@ function addEmbassyMarkers(data) {
             <strong>Address:</strong>
                 ${embassy.location || 'N/A'}
                 ${embassy.city ? ', ' + embassy.city : ''}
-                ${embassy.provinces_region ? ', ' + embassy.provinces_region : ''}, Myanmar <br>
+                ${embassy.provinces_region ? ', ' + embassy.provinces_region : ''}, Cambodia <br>
             <strong>Phone:</strong> ${embassy.telephone || 'N/A'}<br>
             <strong>Fax:</strong> ${embassy.fax || 'N/A'}<br>
             <strong>Email:</strong> ${embassy.email || 'N/A'}<br>
@@ -1016,7 +1016,7 @@ combinedPanelDiv.innerHTML = `
                 </div>
             </div>
             <hr>
-            <button id="resetMapFilter" class="btn btn-sm btn-secondary w-100">Reset All</button>
+            <button id="resetMapFilter" class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) w-100">Reset All</button>
             <div id="totalCountDisplay" style="margin-top:8px;text-align:center;font-size:13px;"></div>
         </div>
     </div>`;

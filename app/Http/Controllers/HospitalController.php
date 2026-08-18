@@ -276,12 +276,12 @@ class HospitalController extends Controller
         $hospitals = $query->get();
 
         $levelCounts = [
-            'Tertiary' => 0,
-            'Secondary' => 0,
+            'National (CPA3+)' => 0,
+            'Provincial (CPA3) / District (CPA2)' => 0,
             'Primary' => 0,
-            'Large Private' => 0,
-            'Medium Private' => 0,
-            'Small Private' => 0,
+            'Large Hospital' => 0,
+            'Medium Hospital / Polyclinic' => 0,
+            'Medium Hospital / Polyclinic' => 0,
         ];
 
         foreach ($hospitals as $hospital) {

@@ -22,7 +22,7 @@ class HospitalFactory extends Factory
             'classification_hospital' => $this->faker->randomElement(['Level 1', 'Level 2', 'Level 3', 'Level 4', 'Level 5', 'Level 6']),
             'province' => $this->faker->state,
             'region' => $this->faker->city,
-            'facility_level' => $this->faker->randomElement(['Primary', 'Secondary', 'Tertiary']),
+            'facility_level' => $this->faker->randomElement(['Primary', 'Provincial (CPA3) / District (CPA2)', 'National (CPA3+)']),
             'address' => $this->faker->address,
             'status' => $this->faker->randomElement(['Public', 'Private']),
             'house_of_operations' => $this->faker->randomElement(['Yes', 'No']),

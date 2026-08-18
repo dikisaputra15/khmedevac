@@ -76,26 +76,26 @@
             <select class="form-control" name="facility_level">
 
                 <optgroup label="Public">
-                    <option value="Tertiary">
-                        Tertiary
+                    <option value="National (CPA3+)">
+                        National (CPA3+)
                     </option>
-                    <option value="Secondary">
-                        Secondary
+                    <option value="Provincial (CPA3) / District (CPA2)">
+                        Provincial (CPA3) / District (CPA2)
                     </option>
-                    <option value="Primary">
-                        Primary
+                    <option value="District (CPA1) / Health Center (MPA)">
+                        District (CPA1) / Health Center (MPA)
                     </option>
                 </optgroup>
 
                 <optgroup label="Private">
-                    <option value="Large Private">
-                        Large Private
+                    <option value="Large Hospital">
+                        Large Hospital
                     </option>
-                    <option value="Medium Private">
-                        Medium Private
+                    <option value="Medium Hospital / Polyclinic">
+                        Medium Hospital / Polyclinic
                     </option>
-                    <option value="Small Private">
-                        Small Private
+                    <option value="Small Hospital">
+                        Small Hospital
                     </option>
                 </optgroup>
 
@@ -136,7 +136,7 @@
                         value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png">
                     <label class="form-check-label">
                         <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png" style="width:24px; height:24px;">
-                        Tertiary
+                        National (CPA3+)
                     </label>
                 </div>
 
@@ -145,7 +145,7 @@
                         value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png">
                     <label class="form-check-label">
                         <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png" style="width:24px; height:24px;">
-                        Secondary
+                        Provincial (CPA3) / District (CPA2)
                     </label>
                 </div>
 
@@ -154,7 +154,7 @@
                         value="https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png">
                     <label class="form-check-label">
                         <img src="https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png" style="width:24px; height:24px;">
-                        Primary
+                        District (CPA1) / Health Center (MPA)
                     </label>
                 </div>
 
@@ -168,7 +168,7 @@
                         value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png">
                     <label class="form-check-label">
                         <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png" style="width:24px; height:24px;">
-                        Large Private
+                        Large Hospital
                     </label>
                 </div>
 
@@ -177,7 +177,7 @@
                         value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png">
                     <label class="form-check-label">
                         <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png" style="width:24px; height:24px;">
-                        Medium Private
+                        Medium Hospital / Polyclinic
                     </label>
                 </div>
 
@@ -186,7 +186,7 @@
                         value="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png">
                     <label class="form-check-label">
                         <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:24px; height:24px;">
-                        Small Private
+                        Small Hospital
                     </label>
                 </div>
         </div>

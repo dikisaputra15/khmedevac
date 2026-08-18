@@ -100,7 +100,7 @@ The following colors are available:
 
 <div class="row">
   <div class="col-sm-4 col-lg-3 p-3 bg-primary"> Primary (primary) / Blue (blue)</div>
-  <div class="col-sm-4 col-lg-3 p-3 bg-secondary"> Secondary (secondary)</div>
+  <div class="col-sm-4 col-lg-3 p-3 bg-secondary"> secondary (secondary)</div>
   <div class="col-sm-4 col-lg-3 p-3 bg-success"> Success (success) / Green (green)</div>
   <div class="col-sm-4 col-lg-3 p-3 bg-info"> Info (info) / Cyan (cyan)</div>
   <div class="col-sm-4 col-lg-3 p-3 bg-warning"> Warning (warning) / Yellow (yellow)</div>

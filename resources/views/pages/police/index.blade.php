@@ -264,17 +264,29 @@
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level5Modal">
                     <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                    <small>State / Region Police Command</small>
+                    <small>Provincial Police Commissariat</small>
                 </button>
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level4Modal">
                     <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                    <small>District Police Command</small>
+                    <small>Municipality Police Inspectorate</small>
                 </button>
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level3Modal">
                     <img src="{{ asset('images/Layer4.png') }}" style="width:12px; height:12px;">
-                    <small>Township Police Station</small>
+                    <small>Commune Police Post</small>
+                </button>
+
+                <button type="button" class="btn btn-danger d-flex flex-column align-items-center p-3 {{ request()->is('hospital') ? 'active' : '' }}"
+                    data-bs-toggle="modal" data-bs-target="#policeAreaLayerModal">
+                <img src="{{ asset('images/icon-structure.png') }}" style="width: 20px; height: 20px;">
+                    <small>Police Area Layer</small>
+                </button>
+
+               <button type="button" class="btn btn-danger d-flex flex-column align-items-center p-3 {{ request()->is('hospital') ? 'active' : '' }}"
+                    data-bs-toggle="modal" data-bs-target="#cmdFlowModal">
+                <img src="{{ asset('images/icon-flow.png') }}" style="width: 20px; height: 20px;">
+                    <small>Cmd Flow</small>
                 </button>
 
             </div>
@@ -327,7 +339,7 @@
             <b>Responsibilities, role, and functions:</b> The Township Police Force supervises Police Stations, Police Posts, and Police Guard Posts; coordinates patrols; receives crime and incident reports; supports investigations; manages local public-order operations; deploys personnel to checkpoints or guard duties; and reports operational developments to the District Police Force. It is the key command layer for managing police presence across both urban and rural areas.
         </p>
         <p class="p-modal text-justify">
-            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Myanmar Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
+            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Cambodia Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
         </p>
         <ul>
             <li>
@@ -403,10 +415,10 @@
             <b>Led by:</b> Police Brigadier General / Police Colonel level officer, depend on the size, location, and operational importance of the State or Region.
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Myanmar's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
+            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Cambodia's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
         </p>
         <p class="p-modal text-justify">
-            Myanmar has seven States and seven Regions.
+            Cambodia has seven States and seven Regions.
         </p>
         <ul>
             <li><b>States:</b> Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, and Shan State.</li>
@@ -441,7 +453,7 @@
            <b>Subordinate department commander rank:</b> Police Brigadier General / Police Colonel level
         </p>
         <p class="p-modal text-justify">
-           Myanmar Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
+           Cambodia Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
         </p>
         <p class="p-modal text-justify">
             Headquarters functions:
@@ -461,6 +473,40 @@
         <p class="p-modal text-justify">
             Major headquarters departments and national-level police bodies are normally led by senior officers at Police Colonel level or above. Larger or more sensitive national functions may be led at Police Brigadier General level.
         </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="policeAreaLayerModal" tabindex="-1" aria-labelledby="policeAreaLayerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered image-modal-dialog" style="--img-ratio:0.8;">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <div class="d-flex align-items-center gap-2">
+            <img src="{{ asset('images/icon-structure.png') }}" style="width:18px; height:18px;">
+            <h5 class="modal-title mb-0" id="policeAreaLayerLabel">Police Area Layer</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body image-modal-body">
+            <img src="{{ asset('images/police-layer.png') }}" alt="Police Area Layer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="cmdFlowModal" tabindex="-1" aria-labelledby="cmdFlowLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered image-modal-dialog" style="--img-ratio:1.5;">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <div class="d-flex align-items-center gap-2">
+            <img src="{{ asset('images/icon-flow.png') }}" style="width:18px; height:18px;">
+            <h5 class="modal-title mb-0" id="cmdFlowLabel">Command Flow</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body image-modal-body">
+            <img src="{{ asset('images/cmd-flow.png') }}" alt="Police Command Flow">
       </div>
     </div>
   </div>
@@ -523,7 +569,7 @@
 <script>
 // === Inisialisasi Peta ===
 const map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 21.9162, lng: 95.9560 },
+    center: { lat: 12.5657, lng: 104.9910 },
     zoom: 5,
     mapTypeId: 'roadmap',
     mapTypeControl: true,
@@ -1053,7 +1099,7 @@ function addPoliceMarkers(data) {
                 ${police.location || 'N/A'}
                 ${police.city_name || 'N/A'}
                 ${police.district_name || 'N/A'}
-                ${police.province_name || 'N/A'}, Myanmar<br>
+                ${police.province_name || 'N/A'}, Cambodia<br>
             <strong>Phone:</strong> ${police.telephone || 'N/A'}<br>
             <strong>Website:</strong> ${police.website || 'N/A'}<br>
             ${police.id ? `<a href="/police/${police.id}/detail" class="btn btn-primary btn-sm mt-2" style="color:white;">Read More</a>` : ''}
@@ -1175,9 +1221,9 @@ combinedPanelDiv.innerHTML = `
             <label>Category:</label>
             ${[
                 'National Police (HQ)',
-                'State / Region Police Command',
-                'District Police Command',
-                'Township Police Station',
+                'Provincial Police Commissariat',
+                'Municipality Police Inspectorate',
+                'Commune Police Post',
             ].map(c => `
             <label style="display:block;font-size:13px;margin-bottom:5px;">
                 <input type="checkbox" name="policeCategory" value="${c}">
@@ -1223,7 +1269,7 @@ combinedPanelDiv.innerHTML = `
                 </div>
             </div>
             <hr>
-            <button id="resetMapFilter" class="btn btn-sm btn-secondary w-100">Reset All</button>
+            <button id="resetMapFilter" class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) w-100">Reset All</button>
             <div id="totalCountDisplay" style="margin-top:8px;text-align:center;font-size:13px;"></div>
         </div>
     </div>`;
