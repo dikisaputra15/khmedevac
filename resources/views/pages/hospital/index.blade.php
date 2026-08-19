@@ -432,13 +432,13 @@
                                   <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level22Modal">
                                         <img src="https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png" style="width:24px; height:24px;">
-                                        <small>Primary</small>
+                                        <small>District (CPA1) / Health Center (MPA)</small>
                                     </button>
                                   </div>
                                    <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level11Modal">
                                         <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:24px; height:24px;">
-                                        <small>Medium Hospital / Polyclinic</small>
+                                        <small>Small Hospital</small>
                                     </button>
                                     </div>
                                 </div>
@@ -1940,8 +1940,12 @@ async function fetchHospitalData(filters = {}) {
         }
     });
 
-    const hospitalApiUrl = @json(url('/api/hospital'));
-    const res = await fetch(`${hospitalApiUrl}?${params.toString()}`, {
+    // Same-origin path inherits the page protocol (HTTPS in production), avoiding
+    // mixed-content errors when Laravel runs behind an SSL-terminating proxy.
+    const hospitalApiUrl = new URL('/api/hospital', window.location.origin);
+    hospitalApiUrl.search = params.toString();
+
+    const res = await fetch(hospitalApiUrl.toString(), {
         headers: { 'Accept': 'application/json' }
     });
 
@@ -2085,14 +2089,44 @@ async function applyHospitalFilters() {
     try {
         result = await fetchHospitalData(filters);
     } catch (error) {
-        console.error('Unable to load hospital markers:', error);
-        const totalDisplay = document.getElementById('totalCountDisplay');
-        if (totalDisplay) totalDisplay.textContent = 'Hospital data failed to load';
-        return;
+        // The page already contains all active hospitals. Keep every filter usable
+        // when the live API is unavailable or deployed under a different base URL.
+        console.warn('Hospital API unavailable; using embedded hospital data.', error);
+        result = { hospitals: initialHospitalData };
     }
 
-    const hospitalsData = Array.isArray(result.hospitals) ? result.hospitals : [];
-    const categoryCounts = result.levelCounts || {};
+    let hospitalsData = Array.isArray(result.hospitals) ? result.hospitals : [];
+
+    // Applying these filters client-side also makes the embedded-data fallback
+    // behave exactly like the API response.
+    hospitalsData = hospitalsData.filter(hospital => {
+        if (hospitalName && !(hospital.name || '').toLowerCase().includes(hospitalName.toLowerCase())) {
+            return false;
+        }
+
+        if (provs.length > 0 && !provs.includes(String(hospital.province_id))) {
+            return false;
+        }
+
+        if (radius > 0 && lastClickedLocation) {
+            const latitude = Number.parseFloat(hospital.latitude);
+            const longitude = Number.parseFloat(hospital.longitude);
+            if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return false;
+
+            const hospitalPosition = new google.maps.LatLng(latitude, longitude);
+            const centerPosition = new google.maps.LatLng(lastClickedLocation.lat, lastClickedLocation.lng);
+            const distanceKm = google.maps.geometry.spherical.computeDistanceBetween(
+                centerPosition,
+                hospitalPosition
+            ) / 1000;
+
+            if (distanceKm > radius) return false;
+        }
+
+        return true;
+    });
+
+    const categoryCounts = countFacilityLevels(hospitalsData);
 
     const filteredHospitals = hospitalsData.filter(a => {
 
