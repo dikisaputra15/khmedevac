@@ -2056,7 +2056,8 @@ function addHospitalMarkers(data) {
 }
 
 // Render immediately from server data. Filtering can refresh these markers via API.
-addHospitalMarkers(@json($initialHospitals));
+const initialHospitalData = @json($initialHospitals);
+addHospitalMarkers(initialHospitalData);
 
 // === Apply Filter ===
 async function applyHospitalFilters() {
@@ -2138,28 +2139,39 @@ async function applyHospitalFilters() {
     addHospitalMarkers(filteredHospitals);
     document.getElementById('totalCountDisplay').innerHTML = `<strong>Hospitals:</strong> ${filteredHospitals.length}`;
 
-    const localCounts = {};
-
-    filteredHospitals.forEach(a => {
-        if (!a.facility_level) return;
-
-        a.facility_level.split(',').forEach(cat => {
-            cat = cat.trim();
-
-            localCounts[cat] = (localCounts[cat] || 0) + 1;
-        });
-    });
-
-    Object.keys(categoryCounts).forEach(cat => {
-    const badge = document.getElementById(`count-${cat.replace(/\s+/g, '-')}`);
-
-    if (badge) {
-        badge.textContent = categoryCounts[cat];
-    }
-});
+    updateFacilityLevelCounts(categoryCounts);
 }
 
 // === Filter Panel (Custom Google Maps Control) ===
+const hospitalFacilityLevels = [
+    'National (CPA3+)',
+    'Provincial (CPA3) / District (CPA2)',
+    'District (CPA1) / Health Center (MPA)',
+    'Large Hospital',
+    'Medium Hospital / Polyclinic',
+    'Small Hospital'
+];
+
+function updateFacilityLevelCounts(levelCounts = {}) {
+    hospitalFacilityLevels.forEach((level, index) => {
+        const badge = document.getElementById(`count-level-${index}`);
+        if (badge) badge.textContent = Number(levelCounts[level] || 0);
+    });
+}
+
+function countFacilityLevels(hospitals = []) {
+    const counts = Object.fromEntries(hospitalFacilityLevels.map(level => [level, 0]));
+
+    hospitals.forEach(hospital => {
+        if (!hospital.facility_level) return;
+        hospital.facility_level.split(',').map(level => level.trim()).forEach(level => {
+            if (Object.prototype.hasOwnProperty.call(counts, level)) counts[level]++;
+        });
+    });
+
+    return counts;
+}
+
 const combinedPanelDiv = document.createElement('div');
 combinedPanelDiv.id = 'combinedPanelDiv';
 Object.assign(combinedPanelDiv.style, {
@@ -2219,10 +2231,10 @@ combinedPanelDiv.innerHTML = `
                 @endforeach
             </select>
             <label>Facility Level:</label>
-            ${['National (CPA3+)','Provincial (CPA3) / District (CPA2)','District (CPA1) / Health Center (MPA)','Large Hospital','Medium Hospital / Polyclinic','Small Hospital'].map(c => `
+            ${hospitalFacilityLevels.map((c, index) => `
             <label style="display:block;font-size:13px;margin-bottom:5px;">
                 <input type="checkbox" name="hospitalLevel" value="${c}">
-                ${c} (<span id="count-${c.replace(/\s+/g, '-')}">0</span>)
+                ${c} (<span id="count-level-${index}">0</span>)
             </label>
             `).join('')}
             <hr>
@@ -2569,10 +2581,11 @@ setTimeout(() => {
 // Retry sampai badge kategori (di dalam combinedPanelDiv) benar-benar ada di DOM,
 // supaya jumlah per kategori tidak "nyangkut" di 0 saat load pertama.
 function initialApplyFilters() {
-    if (!document.getElementById('count-National-(CPA3+)')) {
+    if (!document.getElementById('count-level-0')) {
         setTimeout(initialApplyFilters, 200);
         return;
     }
+    updateFacilityLevelCounts(countFacilityLevels(initialHospitalData));
     applyHospitalFilters();
 }
 initialApplyFilters();
