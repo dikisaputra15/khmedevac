@@ -216,6 +216,99 @@
         text-align: left;
     }
 
+    /* Emergency map legend */
+    .classification.emergency-legend {
+        display: grid;
+        grid-template-columns: minmax(315px, 1fr) minmax(580px, 1.85fr) minmax(280px, .9fr);
+        gap: 14px;
+        align-items: start;
+        justify-content: stretch;
+        padding: 8px 12px 10px;
+        overflow-x: auto;
+    }
+
+    .emergency-legend .legend-section {
+        min-width: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .emergency-legend .class-header {
+        min-height: 24px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .emergency-legend .hospital-list,
+    .emergency-legend .airport-list {
+        width: 100%;
+    }
+
+    .emergency-legend .hospital-item .btn {
+        width: auto !important;
+        min-width: 0;
+        min-height: 27px;
+        padding: 2px 3px !important;
+        gap: 3px;
+        line-height: 1.15;
+        overflow: visible;
+    }
+
+    .emergency-legend .hospital-item .btn small {
+        font-size: 11px;
+        line-height: 1.15;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .emergency-legend .legend-airfield .hospital-item {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr .95fr .85fr;
+        width: 100%;
+        align-items: center;
+    }
+
+    .emergency-legend .legend-airfield .hospital-item .btn:nth-child(n) {
+        width: 100% !important;
+    }
+
+    .emergency-legend .legend-medical-grid {
+        display: grid !important;
+        grid-template-columns: 48px 1fr 1.45fr 1.3fr;
+        width: 100%;
+        align-items: start;
+    }
+
+    .emergency-legend .legend-medical-grid > .class-column {
+        min-width: 0;
+    }
+
+    .emergency-legend .legend-medical-grid .hospital-item {
+        width: 100%;
+    }
+
+    .emergency-legend .legend-medical-grid .hospital-item .btn {
+        width: 100% !important;
+    }
+
+    .emergency-legend .legend-police .hospital-item {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        width: 100%;
+        align-items: center;
+    }
+
+    .emergency-legend .legend-police .hospital-item .btn,
+    .emergency-legend .legend-police .hospital-item .btn:nth-child(n) {
+        width: 100% !important;
+    }
+
+    @media (max-width: 1400px) {
+        .classification.emergency-legend {
+            grid-template-columns: minmax(300px, 1fr) minmax(560px, 1.75fr) minmax(270px, .9fr);
+        }
+    }
+
     /* ====== DIRECTIONS PANEL - Modern Styling ====== */
     #directionsPanel {
         font-family: 'Segoe UI', Roboto, -apple-system, sans-serif !important;
@@ -453,9 +546,9 @@
                 <div class="card-header fw-bold"><img src="{{ asset('images/icon-emergency-support.png') }}" style="width: 24px; height: 24px;"> Emergency Support Tools</div>
 
                 <!-- Legend container -->
-                  <div class="classification">
+                  <div class="classification emergency-legend">
                     <!-- AIRFIELD CLASSIFICATION -->
-                    <div class="classification" style="margin-right: 30px; width: 30%;">
+                    <div class="legend-section legend-airfield">
                       <!-- Airport -->
                       <div class="class-column">
                         <div class="class-header class-airport-category">AIRFIELD CLASSIFICATION</div>
@@ -506,12 +599,12 @@
                       </div>
                     </div>
 
-                    <div style="flex-direction: column;">
+                    <div class="legend-section legend-medical">
                         <!-- Title -->
                         <div>
                             <div class="class-header class-medical-classification">MEDICAL FACILITY CLASSIFICATION</div>
                         </div>
-                        <div style="display: flex; flex-direction: row;">
+                        <div class="legend-medical-grid">
                             <!-- Advanced -->
                             <div class="class-column">
                               <div class="class-header class-advanced">&nbsp</div>
@@ -588,7 +681,7 @@
                         </div>
                       </div>
 
-                       <div class="class-column" style="margin-left: 50px;">
+                       <div class="legend-section legend-police">
                         <div class="class-header class-airport-category">POLICE CLASSIFICATION</div>
 
                         <div class="airport-list">
@@ -2355,7 +2448,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div id="airportFilter" style="display:none;margin-top:8px;">
                 <strong>Category:</strong><br>
-                ${['International','Domestic','Military','Regional','Private']
+                ${['International','Domestic','Military','Regional','Private','Helipad']
                     .map(cls => `<label style="display:block;font-size:13px;">
                         <input type="checkbox" name="airportClass" value="${cls}"> ${cls}
                     </label>`).join('')}
