@@ -19,6 +19,59 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
+        /* === Facilities filter list (map panel) === */
+        .facility-list {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .facility-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 1px 6px;
+            border-radius: 5px;
+            transition: background-color .15s ease;
+        }
+        .facility-item:hover { background-color: #f4f7fb; }
+        .facility-item .form-check-input {
+            position: static;
+            float: none;
+            flex: 0 0 15px;
+            width: 15px;
+            height: 15px;
+            margin: 0;
+            cursor: pointer;
+        }
+        .facility-item .form-check-label {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin: 0;
+            font-size: 13px;
+            line-height: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+        .facility-item .facility-name.is-all { font-weight: 600; }
+        .facility-item .facility-count {
+            flex: 0 0 auto;
+            min-width: 26px;
+            padding: 0 7px;
+            border-radius: 10px;
+            background: #edf1f5;
+            color: #4f5963;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .facility-item .form-check-input:checked + .form-check-label .facility-count {
+            background: #dceaff;
+            color: #1769c2;
+        }
         .form-check-scrollable {
             max-height: 150px;
             overflow-y: auto;
@@ -148,6 +201,47 @@
     .class-advanced { border-bottom: 3px solid #0070c0; }
     .class-intermediate { border-bottom: 3px solid #00b050; }
     .class-basic { border-bottom: 3px solid #ffc000; }
+
+    .dashboard-legend-bar {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .dashboard-legend-content {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .dashboard-legend-groups {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .dashboard-navigation {
+      flex: 0 0 auto;
+      margin-left: auto;
+    }
+
+    @media (max-width: 1600px) {
+      .dashboard-legend-bar {
+        flex-wrap: wrap;
+      }
+
+      .dashboard-legend-content {
+        flex-basis: 100%;
+      }
+
+      .dashboard-legend-groups {
+        flex-wrap: wrap;
+      }
+
+      .dashboard-navigation {
+        width: 100%;
+      }
+    }
 
     /* Airport layout */
     .airport-list {
@@ -348,10 +442,10 @@
 @section('conten')
 
 <div class="card">
-    <div class="row" style="background-color: #dfeaf1;">
-       <div class="col-md-9">
-            <div class="d-flex p-2" style="justify-content: flex-start;">
-                <div class="d-flex" style="gap: 5px;">
+    <div class="dashboard-legend-bar" style="background-color: #dfeaf1;">
+       <div class="dashboard-legend-content">
+            <div class="d-flex p-3" style="justify-content: flex-start;">
+                <div class="dashboard-legend-groups">
 
                 <!-- Airport -->
                       <div>
@@ -528,7 +622,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="dashboard-navigation">
             <div class="d-flex justify-content-end p-3">
                 <div class="d-flex gap-2 mt-2">
 
@@ -2948,32 +3042,41 @@ document.addEventListener('change', function(e) {
         <div id="filterPanel" style="padding:0 10px 10px 10px;max-height:52vh;overflow-y:auto;border-top:1px solid #eee;">
             <div style="padding-top:8px;">
             <strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:#555;">Facilities</strong>
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="hospital" id="facilityHospital">
-                        <label class="form-check-label" for="facilityHospital">
-                            Medical (<span id="hospitalCount">0</span>)
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="airport" id="facilityAirport">
-                        <label class="form-check-label" for="facilityAirport">
-                            Aviation (<span id="airportCount">0</span>)
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="police" id="facilityPolice">
-                        <label class="form-check-label" for="facilityPolice">
-                            Police (<span id="policeCount">0</span>)
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="embassy" id="facilityEmbassy">
-                        <label class="form-check-label" for="facilityEmbassy">
-                            Embassies (<span id="embassyCount">0</span>)
-                        </label>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="airport" id="facilityAirport" checked>
+                            <label class="form-check-label" for="facilityAirport">
+                                <span class="facility-name">Aviation</span>
+                                <span class="facility-count" id="airportCount">0</span>
+                            </label>
+                        </div>
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="hospital" id="facilityHospital">
+                            <label class="form-check-label" for="facilityHospital">
+                                <span class="facility-name">Medical</span>
+                                <span class="facility-count" id="hospitalCount">0</span>
+                            </label>
+                        </div>
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="police" id="facilityPolice">
+                            <label class="form-check-label" for="facilityPolice">
+                                <span class="facility-name">Police</span>
+                                <span class="facility-count" id="policeCount">0</span>
+                            </label>
+                        </div>
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="embassy" id="facilityEmbassy">
+                            <label class="form-check-label" for="facilityEmbassy">
+                                <span class="facility-name">Embassies</span>
+                                <span class="facility-count" id="embassyCount">0</span>
+                            </label>
+                        </div>
+                        <div class="facility-item">
+                            <input class="form-check-input" type="checkbox" value="all" id="facilityAll">
+                            <label class="form-check-label" for="facilityAll">
+                                <span class="facility-name is-all">All</span>
+                            </label>
+                        </div>
                     </div>
 
                     <hr>
@@ -3031,6 +3134,27 @@ document.addEventListener('change', function(e) {
             google.maps.event.addDomListener(combinedPanelDiv, 'touchstart', e => e.stopPropagation());
             google.maps.event.addDomListener(combinedPanelDiv, 'wheel', e => e.stopPropagation());
             map.controls[google.maps.ControlPosition.RIGHT_TOP].push(combinedPanelDiv);
+
+    // === FACILITIES "ALL" CHECKBOX SYNC ===
+    function syncFacilityAllCheckbox() {
+        const all = document.getElementById('facilityAll');
+        if (!all) return;
+        const boxes = [...document.querySelectorAll('.facility-checkbox')];
+        all.checked = boxes.length > 0 && boxes.every(cb => cb.checked);
+    }
+
+    document.addEventListener('change', e => {
+        if (!e.target) return;
+        if (e.target.id === 'facilityAll') {
+            document.querySelectorAll('.facility-checkbox').forEach(cb => {
+                cb.checked = e.target.checked;
+            });
+            return;
+        }
+        if (e.target.classList && e.target.classList.contains('facility-checkbox')) {
+            syncFacilityAllCheckbox();
+        }
+    }, true);
 
     // === INIT SELECT2 ===
     setTimeout(() => {
@@ -3132,8 +3256,11 @@ document.addEventListener('click', async (e) => {
 
     // RESET ALL FILTERS (tombol Reset All)
     if (e.target.id === 'resetMapFilter') {
-        // 1) UI reset
+        // 1) UI reset (default: hanya Aviation yang aktif)
         document.querySelectorAll('#filterPanel input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+        const defaultFacility = document.getElementById('facilityAirport');
+        if (defaultFacility) defaultFacility.checked = true;
+        syncFacilityAllCheckbox();
         const provinceSearch = document.getElementById('provinceSearch');
         if (provinceSearch) provinceSearch.value = '';
         const provinceSearchInput = document.getElementById('provinceSearchInput');
@@ -3201,7 +3328,7 @@ document.addEventListener('click', async (e) => {
         updateTotalCountDisplay();
 
         // 6) Re-fetch semua data
-        await applyFiltersWithMapControl([], [], [], [], 0, '', '');
+        await applyFiltersWithMapControl(['airport'], [], [], [], 0, '', '');
 
         e.stopPropagation();
         e.preventDefault();
@@ -3246,7 +3373,14 @@ setTimeout(() => {
 }, 350);
 
     // --- Initial Load ---
-    refreshCurrentFilters();
+    // Tunggu panel terpasang agar checkbox Aviation terbaca sebagai filter awal.
+    (function initialLoad() {
+        if (!document.getElementById('facilityAirport')) {
+            setTimeout(initialLoad, 100);
+            return;
+        }
+        refreshCurrentFilters();
+    })();
 </script>
 
 @endpush
