@@ -21,9 +21,9 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Region / State</label>
+                <label>Capital (Reach Theany) / Province (Khaet)</label>
                 <select class="form-control" name="province_id" id="province">
-                        <option value="0">-Choosse Region / State-</option>
+                        <option value="0">-Choosse Capital (Reach Theany) / Province (Khaet)-</option>
                     @foreach($provinces as $prov)
                         <option value="{{$prov->id}}">{{$prov->provinces_region}}</option>
                     @endforeach
@@ -33,18 +33,18 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label for="city">District</label>
+                <label for="city">Municipality (Krong) / District (Srok) / Khan</label>
                 <select name="city" id="city" class="form-control">
-                    <option value="">-Choosse District-</option>
+                    <option value="">-Choosse Municipality (Krong) / District (Srok) / Khan-</option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Township</label>
+                <label>Commune (Khum) / Sangkat</label>
                 <select name="district_id" id="district" class="form-control">
-                    <option value="">-Choose Township-</option>
+                    <option value="">-Choosse Commune (Khum) / Sangkat-</option>
                 </select>
             </div>
         </div>
@@ -1017,14 +1017,14 @@
                 url: '/get-districts/' + cityID,
                 type: 'GET',
                 success: function (data) {
-                    $('#district').empty().append('<option value="">-Choose Township-</option>');
+                    $('#district').empty().append('<option value="">-Choosse Commune (Khum) / Sangkat-</option>');
                     $.each(data, function (key, district) {
                         $('#district').append('<option value="'+ district.id +'">'+ district.city +'</option>');
                     });
                 }
             });
         } else {
-            $('#district').html('<option value="">-Choose Township-</option>');
+            $('#district').html('<option value="">-Choosse Commune (Khum) / Sangkat-</option>');
         }
     });
 </script>

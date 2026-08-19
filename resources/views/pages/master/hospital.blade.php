@@ -21,8 +21,8 @@
                       <th>No</th>
                       <th>ID</th>
                       <th>Hospital Name</th>
-                      <th>District</th>
-                      <th>Township</th>
+                      <th>District (Srok)</th>
+                      <th>Commune (Khum)</th>
                       <th>Created At</th>
                       <th>Updated At</th>
                       <th>Last Updated By</th>

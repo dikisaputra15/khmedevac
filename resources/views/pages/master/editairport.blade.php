@@ -29,7 +29,7 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Region / State</label>
+                <label>Edit Capital (Reach Theany) / Province (Khaet)</label>
                 <select class="form-control" name="province_id" id="province">
                     <?php
                         foreach ($provinces as $prov) {
@@ -51,7 +51,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Edit District</label>
+                <label>Edit Municipality (Krong) / District (Srok) / Khan</label>
                 <select class="form-control" name="city" id="city">
                     <?php
                         foreach ($districts as $district) {
@@ -73,7 +73,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Township</label>
+                <label>Edit Commune (Khum) / Sangkat</label>
                 <select class="form-control" name="district_id" id="district">
                     <?php
                         foreach ($cities as $city) {
@@ -1172,14 +1172,14 @@
                 url: '/get-districts/' + cityID,
                 type: 'GET',
                 success: function (data) {
-                    $('#district').empty().append('<option value="">-Choose Township-</option>');
+                    $('#district').empty().append('<option value="">-Choosse Commune (Khum) / Sangkat-</option>');
                     $.each(data, function (key, district) {
                         $('#district').append('<option value="'+ district.id +'">'+ district.city +'</option>');
                     });
                 }
             });
         } else {
-            $('#district').html('<option value="">-Choose Township-</option>');
+            $('#district').html('<option value="">-Choosse Commune (Khum) / Sangkat-</option>');
         }
     });
 </script>
