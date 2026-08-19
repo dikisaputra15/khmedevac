@@ -2569,7 +2569,7 @@ setTimeout(() => {
 // Retry sampai badge kategori (di dalam combinedPanelDiv) benar-benar ada di DOM,
 // supaya jumlah per kategori tidak "nyangkut" di 0 saat load pertama.
 function initialApplyFilters() {
-    if (!document.getElementById('count-National (CPA3+)')) {
+    if (!document.getElementById('count-National-(CPA3+)')) {
         setTimeout(initialApplyFilters, 200);
         return;
     }

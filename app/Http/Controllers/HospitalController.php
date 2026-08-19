@@ -289,10 +289,10 @@ class HospitalController extends Controller
         $levelCounts = [
             'National (CPA3+)' => 0,
             'Provincial (CPA3) / District (CPA2)' => 0,
-            'Primary' => 0,
+            'District (CPA1) / Health Center (MPA)' => 0,
             'Large Hospital' => 0,
             'Medium Hospital / Polyclinic' => 0,
-            'Medium Hospital / Polyclinic' => 0,
+            'Small Hospital' => 0,
         ];
 
         foreach ($hospitals as $hospital) {
