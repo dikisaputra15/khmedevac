@@ -1269,7 +1269,7 @@ combinedPanelDiv.innerHTML = `
                 </div>
             </div>
             <hr>
-            <button id="resetMapFilter" class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) w-100">Reset All</button>
+            <button id="resetMapFilter" class="btn btn-sm btn-secondary w-100">Reset All</button>
             <div id="totalCountDisplay" style="margin-top:8px;text-align:center;font-size:13px;"></div>
         </div>
     </div>`;

@@ -3060,7 +3060,7 @@ document.addEventListener('change', function(e) {
 
                     <hr>
                     <button id="resetMapFilter"
-                            class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) w-100"
+                            class="btn btn-sm btn-secondary w-100"
                             style="margin-top:auto;">
                         Reset All
                     </button>

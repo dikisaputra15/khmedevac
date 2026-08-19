@@ -1940,7 +1940,14 @@ async function fetchHospitalData(filters = {}) {
         }
     });
 
-    const res = await fetch(`/api/hospital?${params.toString()}`);
+    const hospitalApiUrl = @json(url('/api/hospital'));
+    const res = await fetch(`${hospitalApiUrl}?${params.toString()}`, {
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (!res.ok) {
+        throw new Error(`Hospital API returned ${res.status}`);
+    }
 
     return await res.json();
 }
@@ -1953,9 +1960,12 @@ function addHospitalMarkers(data) {
     const bounds = new google.maps.LatLngBounds();
 
     data.forEach(h => {
-        if (!h.latitude || !h.longitude) return;
+        const latitude = Number.parseFloat(h.latitude);
+        const longitude = Number.parseFloat(h.longitude);
+        if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return;
+        if (latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180) return;
 
-        const position = { lat: parseFloat(h.latitude), lng: parseFloat(h.longitude) };
+        const position = { lat: latitude, lng: longitude };
 
         const marker = new google.maps.Marker({
             position,
@@ -2045,6 +2055,9 @@ function addHospitalMarkers(data) {
         map.fitBounds(bounds, 50);
 }
 
+// Render immediately from server data. Filtering can refresh these markers via API.
+addHospitalMarkers(@json($initialHospitals));
+
 // === Apply Filter ===
 async function applyHospitalFilters() {
     // Ambil provinsi terpilih
@@ -2067,10 +2080,18 @@ async function applyHospitalFilters() {
         filters.center_lng = lastClickedLocation.lng;
     }
 
-    const result = await fetchHospitalData(filters);
+    let result;
+    try {
+        result = await fetchHospitalData(filters);
+    } catch (error) {
+        console.error('Unable to load hospital markers:', error);
+        const totalDisplay = document.getElementById('totalCountDisplay');
+        if (totalDisplay) totalDisplay.textContent = 'Hospital data failed to load';
+        return;
+    }
 
-    const hospitalsData = result.hospitals;
-    const categoryCounts = result.levelCounts;
+    const hospitalsData = Array.isArray(result.hospitals) ? result.hospitals : [];
+    const categoryCounts = result.levelCounts || {};
 
     const filteredHospitals = hospitalsData.filter(a => {
 
@@ -2198,7 +2219,7 @@ combinedPanelDiv.innerHTML = `
                 @endforeach
             </select>
             <label>Facility Level:</label>
-            ${['National (CPA3+)','Provincial (CPA3) / District (CPA2)','Primary','Large Hospital','Medium Hospital / Polyclinic','Medium Hospital / Polyclinic'].map(c => `
+            ${['National (CPA3+)','Provincial (CPA3) / District (CPA2)','District (CPA1) / Health Center (MPA)','Large Hospital','Medium Hospital / Polyclinic','Small Hospital'].map(c => `
             <label style="display:block;font-size:13px;margin-bottom:5px;">
                 <input type="checkbox" name="hospitalLevel" value="${c}">
                 ${c} (<span id="count-${c.replace(/\s+/g, '-')}">0</span>)
@@ -2243,7 +2264,7 @@ combinedPanelDiv.innerHTML = `
                 </div>
             </div>
             <hr>
-            <button id="resetMapFilter" class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) w-100">Reset All</button>
+            <button id="resetMapFilter" class="btn btn-sm btn-secondary w-100">Reset All</button>
             <div id="totalCountDisplay" style="margin-top:8px;text-align:center;font-size:13px;"></div>
         </div>
     </div>`;

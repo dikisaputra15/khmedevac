@@ -20,9 +20,20 @@ class HospitalController extends Controller
         $hospitalNames = DB::table('hospitals')->where('hospital_status', true)->distinct()->pluck('name')->filter()->sort()->values();
         $hospitalCategories = DB::table('hospitals')->distinct()->pluck('facility_level')->filter()->sort()->values();
         $hospitalLocations = DB::table('hospitals')->distinct()->pluck('address')->filter()->sort()->values();
+        $initialHospitals = DB::table('hospitals')
+            ->where('hospital_status', true)
+            ->whereNotNull('latitude')
+            ->whereNotNull('longitude')
+            ->get();
 
         $provinces = Provincesregion::all();
-        return view('pages.hospital.index', compact('provinces','hospitalNames','hospitalCategories','hospitalLocations'));
+        return view('pages.hospital.index', compact(
+            'provinces',
+            'hospitalNames',
+            'hospitalCategories',
+            'hospitalLocations',
+            'initialHospitals'
+        ));
     }
 
     /**

@@ -2312,7 +2312,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div id="hospitalFilter" style="display:none;">
                 <strong>Facility Level:</strong><br>
-                ${['Class A','Class B','Class C','Class D','Public Health Center (PUSKESMAS)']
+                ${['National (CPA3+)','Provincial (CPA3) / District (CPA2)','District (CPA1) / Health Center (MPA)','Large Hospital','Medium Hospital / Polyclinic','Small Hospital']
                     .map(lvl => `<label style="display:block;font-size:13px;">
                         <input type="checkbox" name="hospitalLevel" value="${lvl}"> ${lvl}
                     </label>`).join('')}
@@ -2329,12 +2329,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div id="policeFilter" style="display:none;margin-top:8px;">
                 <strong>Police Category:</strong><br>
                 ${[
-                    'Indonesian National Police (Polri) HQ',
-                    'Provincial Police (Polda)',
-                    'Municipality Police (Polres)',
-                    'District Police (Polsek)',
-                    'Police Mobile Brigade (Brimob)',
-                    'Police Bomb Squad (Gegana)'
+                    'National Police (HQ)',
+                    'Provincial Police Commissariat',
+                    'Municipality Police Inspectorate',
+                    'Commune Police Post',
                 ].map(cat => `
                     <label style="display:block;font-size:13px;">
                         <input type="checkbox" name="policeCategory" value="${cat}"> ${cat}
@@ -2342,7 +2340,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('')}
             </div>
 
-            <button id="resetFilter" class="btn btn-sm btn-Provincial (CPA3) / District (CPA2) mt-3 w-100">Reset Filter</button>
+            <button id="resetFilter" class="btn btn-sm btn-secondary mt-3 w-100">Reset Filter</button>
         `;
 
         // Prevent events from passing to the map
