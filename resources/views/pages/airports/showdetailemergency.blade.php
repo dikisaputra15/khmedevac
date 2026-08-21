@@ -854,7 +854,7 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
              <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">Provincial Police</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Provincial / Municipal Police Commissariat</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -900,7 +900,7 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
              <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">District Police</h5>
+            <h5 class="modal-title" id="disclaimerLabel">District Police Inspectorate</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
