@@ -82,7 +82,7 @@
                     <label class="form-check-label" for="domestic">Domestic</label>
                 </div>
                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="category[]" id="regionaldomestic" value="Regional Domestic">
+                    <input class="form-check-input" type="checkbox" name="category[]" id="regionaldomestic" value="Regional">
                     <label class="form-check-label" for="domestic">Regional Domestic</label>
                 </div>
                 <div class="form-check">

@@ -205,6 +205,57 @@
             border-color: #1a73e8 !important;
             box-shadow: 0 0 0 2px rgba(26,115,232,0.2) !important;
         }
+
+        /* Keep diagram modals inside the viewport at their natural aspect ratio. */
+        .image-modal-dialog {
+            width: calc(100vw - 24px);
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #cmdFlowModal .image-modal-dialog {
+            max-width: min(1200px, calc(150vh - 165px));
+        }
+
+        #policeAreaLayerModal .image-modal-dialog {
+            max-width: min(1200px, calc(80vh - 88px));
+        }
+
+        .image-modal-dialog .modal-content {
+            max-height: calc(100vh - 24px);
+            overflow: hidden;
+        }
+
+        .image-modal-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+            padding: 12px;
+            overflow: auto;
+            background-color: #f8f9fa;
+        }
+
+        .image-modal-body img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: calc(100vh - 110px);
+            object-fit: contain;
+        }
+
+        @media (max-width: 575.98px) {
+            .image-modal-dialog {
+                width: calc(100vw - 12px);
+                margin: 6px auto;
+            }
+
+            .image-modal-body {
+                padding: 6px;
+            }
+        }
 </style>
 @endpush
 
@@ -257,22 +308,22 @@
             <div class="d-flex align-items-center gap-3">
                 <span class="fw-bold me-2"><small>Map Legend:</small></span>
 
-                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level6Modal">
+                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police1Modal">
                     <img src="{{ asset('images/Layer1.png') }}" style="width:12px; height:12px;">
                     <small>National Police (HQ)</small>
                 </button>
 
-                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level5Modal">
+                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police2Modal">
                     <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                    <small>Provincial Police Commissariat</small>
+                    <small>Provincial Police</small>
                 </button>
 
-                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level4Modal">
+                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police3Modal">
                     <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                    <small>Municipality Police Inspectorate</small>
+                    <small>District Police</small>
                 </button>
 
-                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level3Modal">
+                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police4Modal">
                     <img src="{{ asset('images/Layer4.png') }}" style="width:12px; height:12px;">
                     <small>Commune Police Post</small>
                 </button>
@@ -312,127 +363,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="level3Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">Township Police Force</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">
-            The Township Police Force is the main local command layer of the MPF. Connecting District-level supervision with frontline policing and manages the police units that directly serve towns, wards, village tracts, villages, and other local security areas.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Led by:</b> Police Major / Police Captain-level officer.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> The Township Police Force is responsible for local police command in one Township.
-        </p>
-        <p class="p-modal text-justify">
-            A Township may include towns, wards, village tracts, villages, roads, public facilities, local security points, Police Stations, Police Posts, and Police Guard Posts.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> The Township Police Force supervises Police Stations, Police Posts, and Police Guard Posts; coordinates patrols; receives crime and incident reports; supports investigations; manages local public-order operations; deploys personnel to checkpoints or guard duties; and reports operational developments to the District Police Force. It is the key command layer for managing police presence across both urban and rural areas.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Cambodia Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
-        </p>
-        <ul>
-            <li>
-                <b>Police Station</b>
-                <p class="p-modal text-justify">
-                    Police Station is the primary frontline police office responsible for routine law enforcement in a defined local area and is the main operational unit below the Township Police Force.
-                </p>
-                <b>Led by:</b> Police Captain / Police Lieutenant-level officer, depend on the station size, location, and operational importance.
-                <b>Area of responsibility:</b> Police Station is responsible for routine law enforcement and public police services in its assigned jurisdiction.
-                <p class="p-modal text-justify">
-                    Police Station may cover a town area, ward cluster, village tract group, road corridor, facility area, or other defined local policing zone.
-                </p>
-                <b>Responsibilities, role, and functions:</b> A Police Station handles frontline law enforcement, incident response, crime reporting, patrol operations, preliminary investigations, public-order support, detention and case-processing support, local security coordination, and reporting to the Township Police Force. It also serves as the main local point for public complaints, incident registration, criminal case support, and patrol coordination.
-            </li>
-            <li>
-                <b>Police Post / Police Guard Post</b>
-                <p class="p-modal text-justify">
-                    A Police Post or Police Guard Post is a small frontline police presence established to extend police coverage beyond the main Police Station. It supports local security, observation, reporting, and rapid response, but usually has more limited administrative and investigative capacity than a full Police Station
-                </p>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="level4Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">District Police Force</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">
-            District Police Force is the intermediate territorial command between the first-level area command and the Township Police Force. It provides supervision, coordination, reporting, and operational control across several townships in a District.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Led by:</b> Police Lieutenant Colonel level officer.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> District Police Force is responsible for intermediate territorial police command across one District.
-        </p>
-        <p class="p-modal text-justify">
-            A District is composed of multiple Townships. Districts sit below the State, Region, Nay Pyi Taw Union Territory, or relevant Self-Administered Area arrangement.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> District Police Force coordinates district law enforcement, supervises Township Police Forces, supports criminal investigations, manages public order deployments, consolidates operational reports, monitors local security conditions, and coordinates incidents that affect more than one township. It also ensures that township-level policing follows instructions from the relevant State, Region, Nay Pyi Taw, or Self-Administered Area command.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="level5Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">State Police Force / Region Police Force</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">
-            State Police Force / Region Police Force is the main territorial police command below MPF Headquarters. It translates national police policy into State or Region level policing operations and supervises police activity across its assigned territory.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Led by:</b> Police Brigadier General / Police Colonel level officer, depend on the size, location, and operational importance of the State or Region.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Cambodia's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
-        </p>
-        <p class="p-modal text-justify">
-            Cambodia has seven States and seven Regions.
-        </p>
-        <ul>
-            <li><b>States:</b> Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, and Shan State.</li>
-            <li><b>Regions:</b> Ayeyarwady Region, Bago Region, Magway Region, Mandalay Region, Sagaing Region, Tanintharyi Region, and Yangon Region.</li>
-        </ul>
-        <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> State Police Force or Region Police Force is responsible for area level police command and territorial law enforcement coordination. Its functions include public order control, crime prevention, security reporting, investigation support, operational planning, inspection of subordinate units, personnel administration, and coordination with relevant civil administration and security bodies. This level consolidates reports from districts and townships, supervises local police operations, and transmits national level directives from MPF Headquarters to subordinate territorial commands.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="level6Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+<div class="modal fade" id="police1Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
     <div class="modal-content">
       <div class="modal-header">
@@ -444,42 +375,173 @@
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-           <b>Command level:</b> National headquarters
+            <strong>Command Level:</strong>&nbsp;National Police Commander
         </p>
         <p class="p-modal text-justify">
-           <b>Head rank:</b> Major General / Lieutenant General level at Chief level
+            <strong>Typical Head Rank:</strong>&nbsp;Police General (4-star)
         </p>
         <p class="p-modal text-justify">
-           <b>Subordinate department commander rank:</b> Police Brigadier General / Police Colonel level
+            <strong>Role:</strong>&nbsp;Highest commander of the CNP
         </p>
         <p class="p-modal text-justify">
-           Cambodia Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
+            Exercises overall command, strategic leadership, and operational control of the CNP, implementing national internal security policies under the authority of the Minister of Interior.
         </p>
         <p class="p-modal text-justify">
-            Headquarters functions:
+            <strong>Responsibilities:</strong>
         </p>
         <ul>
-            <li>National command and control</li>
-            <li>Force administration and personnel management</li>
-            <li>Policy and standing-order implementation</li>
-            <li>Operational coordination</li>
-            <li>Criminal and security coordination</li>
-            <li>Training and doctrine development</li>
-            <li>Discipline, morale, and welfare supervision</li>
-            <li>Logistics, supply, finance, and support services</li>
-            <li>International police cooperation</li>
-            <li>Coordination with territorial and specialized police formations</li>
+            <li>Direct and supervise all national, specialized, and territorial police forces.</li>
+            <li>Formulate national policing strategies, operational priorities, and organizational policies.</li>
+            <li>Maintain public security, public order, and crime prevention throughout Cambodia.</li>
+            <li>Coordinate nationwide law enforcement operations and emergency responses.</li>
+            <li>Oversee criminal investigations and major security operations of national significance.</li>
+            <li>Manage personnel appointments, promotions, discipline, and professional standards across the CNP.</li>
+            <li>Represent the CNP before the Royal Government, foreign law enforcement agencies, and international organizations.</li>
+            <li>Advise the Minister of Interior on policing, public security, and internal security matters.</li>
+            <li>Ensure effective coordination between the CNP, the judiciary, the Royal Cambodian Armed Forces, and other government institutions.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="police2Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex align-items-center">
+             <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
+            <h5 class="modal-title" id="disclaimerLabel">Provincial Police</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="p-modal text-justify">
+            <strong>Title:</strong>&nbsp;Provincial / Municipal Police Commissioner
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Command Level:</strong>&nbsp;Top territorial police command
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Typical Head Rank:</strong>&nbsp;Police Brigadier General (1-star) or Police Major General (2-star)
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Administrative Equivalent:</strong>&nbsp;Provincial/Municipality level
+        </p>
+        <p class="p-modal text-justify">
+            Functions as the highest territorial command of the CNP within each province or the capital municipality, directing all policing, security, criminal investigation, and public order operations within its jurisdiction.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Responsibilities:</strong>
+        </p>
+        <ul>
+            <li>Command and supervise all district police inspectorates within the province or municipality.</li>
+            <li>Implement national policing policies and operational directives.</li>
+            <li>Coordinate crime prevention, criminal investigations, and public order operations.</li>
+            <li>Manage emergency response and disaster-related policing activities.</li>
+            <li>Coordinate security for national events, elections, and VIP visits.</li>
+            <li>Cooperate with provincial and municipal governors and other government agencies.</li>
+            <li>Supervise personnel administration, logistics, and operational readiness within the jurisdiction.</li>
         </ul>
         <p class="p-modal text-justify">
-            Major headquarters departments and national-level police bodies are normally led by senior officers at Police Colonel level or above. Larger or more sensitive national functions may be led at Police Brigadier General level.
+            Report operational developments and security assessments to the Commissioner-General.
         </p>
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="police3Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex align-items-center">
+             <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
+            <h5 class="modal-title" id="disclaimerLabel">District Police</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="p-modal text-justify">
+            <strong>Title:</strong>&nbsp;District Police Inspector
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Command Level:</strong>&nbsp;Second-tier territorial police command
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Typical Head Rank:</strong>&nbsp;Police Lieutenant Colonel or Police Colonel
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Administrative Equivalent:</strong>&nbsp;District level
+        </p>
+        <p class="p-modal text-justify">
+            Directs and coordinates policing activities within a district by supervising commune police posts and implementing provincial policing priorities.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Responsibilities:</strong>
+        </p>
+        <ul>
+            <li>Supervise commune police posts.</li>
+            <li>Conduct district-level law enforcement and crime prevention operations.</li>
+            <li>Coordinate criminal investigations within the district.</li>
+            <li>Maintain public order during local events and emergencies.</li>
+            <li>Support provincial police operations and specialized investigations.</li>
+            <li>Coordinate with district administrative authorities and local institutions.</li>
+            <li>Monitor crime trends and public security conditions.</li>
+            <li>Submit operational and intelligence reports to the Provincial or Municipal Police Commissariat.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="police4Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex align-items-center">
+             <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px;">
+            <h5 class="modal-title" id="disclaimerLabel">Commune Police Post</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="p-modal text-justify">
+            <strong>Title:</strong>&nbsp;Chief of Commune Police Post
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Command Level:</strong>&nbsp;Third-tier territorial police command <em>(Frontline operational unit)</em>
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Typical Head Rank:</strong>&nbsp;Police Captain or Police Major
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Administrative Equivalent:</strong>&nbsp;Communal level
+        </p>
+        <p class="p-modal text-justify">
+            Provides frontline policing services at the community level through preventive patrols, first-response law enforcement, community engagement, and maintenance of public order.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Responsibilities:</strong>
+        </p>
+        <ul>
+            <li>Conduct routine patrols and visible police presence within the community.</li>
+            <li>Respond to emergencies, crimes, and public complaints.</li>
+            <li>Prevent and detect criminal activities.</li>
+            <li>Receive and process initial reports of criminal and public order incidents.</li>
+            <li>Carry out community policing and crime prevention programs.</li>
+            <li>Maintain peace and public order during local events.</li>
+            <li>Gather local intelligence and monitor community security issues.</li>
+            <li>Cooperate with commune authorities and community leaders to address local safety concerns.</li>
+            <li>Refer serious criminal investigations to the District Police Inspectorate or specialized investigative units as appropriate.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="policeAreaLayerModal" tabindex="-1" aria-labelledby="policeAreaLayerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered image-modal-dialog" style="--img-ratio:0.8;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:900px;">
     <div class="modal-content">
       <div class="modal-header py-2">
         <div class="d-flex align-items-center gap-2">
@@ -488,8 +550,25 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body image-modal-body">
-            <img src="{{ asset('images/police-layer.png') }}" alt="Police Area Layer">
+      <div class="modal-body">
+        <ol class="mb-3">
+            <li class="mb-3">
+                <strong>Strategic Command:</strong> The MOI provides the highest level of civilian authority and strategic direction over the CNP. Under the Minister, the Commissioner-General of the Cambodian National Police exercises nationwide command, formulates policing strategies, establishes operational priorities, allocates national resources, and ensures that policing activities support the Royal Government's internal security, public order, and crime control objectives.
+            </li>
+            <li class="mb-3" value="3">
+                <strong>Headquarters Command:</strong> The General Commissariat of National Police (GCNP) is the national headquarters of the CNP and functions as the principal command, coordination, and administrative body. Led by the Commissioner-General and supported by Deputy Commissioners-General, it develops operational policies, directs nationwide police operations, manages personnel and logistics, coordinates intelligence and inter-agency cooperation, and supervises both specialized departments and territorial police commands.
+            </li>
+            <li class="mb-3" value="4">
+                <strong>Functional Command:</strong> Functional command consists of the CNP's central departments, specialized police units, and national support services, each responsible for a specific policing function or technical capability. These include judicial policing, public order, border security, counterterrorism, anti-drug enforcement, criminal investigations, forensic science, international police cooperation, police training, communications, logistics, finance, personnel, and other specialized services. These units provide nationwide operational leadership, technical expertise, policy guidance, and specialized support to territorial police forces.
+            </li>
+            <li value="5">
+                <strong>Territorial Command:</strong> Territorial command comprises the 25 Provincial and Municipal Police Commissariats, District Police Inspectorates, and Commune Police Posts, which collectively deliver policing services throughout Cambodia. This command structure enables the CNP to implement national policies while responding effectively to local security needs through preventive patrols, criminal investigations, emergency response, public order management, and community policing. Territorial commanders remain operationally accountable to the Commissioner-General while maintaining close coordination with provincial and local government authorities within their respective jurisdictions.
+            </li>
+        </ol>
+        <p class="mb-0">
+            <strong>Source:</strong>
+            <a href="https://www.scribd.com/presentation/702873302/Lea-2-Cambodia" target="_blank" rel="noopener noreferrer">Lea 2 Cambodia</a>
+        </p>
       </div>
     </div>
   </div>
@@ -1221,8 +1300,8 @@ combinedPanelDiv.innerHTML = `
             <label>Category:</label>
             ${[
                 'National Police (HQ)',
-                'Provincial Police Commissariat',
-                'Municipality Police Inspectorate',
+                'Provincial Police',
+                'District Police',
                 'Commune Police Post',
             ].map(c => `
             <label style="display:block;font-size:13px;margin-bottom:5px;">

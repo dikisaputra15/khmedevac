@@ -464,6 +464,47 @@
         background: #e8f0fe !important;
         border-radius: 6px;
     }
+
+    /* ===== Medical Facility Modals ===== */
+    .medical-facility-modal .modal-dialog {
+        width: calc(100% - 12px);
+        max-width: 1200px;
+    }
+
+    .medical-facility-modal .modal-content {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    .medical-facility-modal .modal-title {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .medical-facility-modal .nav-tabs {
+        gap: 4px;
+        margin-bottom: 16px !important;
+    }
+
+    .medical-facility-modal .nav-tabs .nav-link {
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 575.98px) {
+        .medical-facility-modal .modal-dialog {
+            width: auto;
+            margin: 6px;
+        }
+
+        .medical-facility-modal .nav-tabs .nav-link {
+            padding: 9px 11px;
+            font-size: 11px;
+        }
+    }
 </style>
 
 @endpush
@@ -696,7 +737,7 @@
 
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police2Modal">
                                         <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                                        <small>Provincial Police Commissariat</small>
+                                        <small>Provincial Police</small>
                                     </button>
                                 </div>
 
@@ -704,7 +745,7 @@
                                 <div class="hospital-item">
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police3Modal">
                                          <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                                        <small>Municipality Police Inspectorate</small>
+                                        <small>District Police</small>
                                     </button>
 
                                     <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police4Modal">
@@ -786,35 +827,31 @@
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-           <b>Command level:</b> National headquarters
+            <strong>Command Level:</strong>&nbsp;National Police Commander
         </p>
         <p class="p-modal text-justify">
-           <b>Head rank:</b> Major General / Lieutenant General level at Chief level
+            <strong>Typical Head Rank:</strong>&nbsp;Police General (4-star)
         </p>
         <p class="p-modal text-justify">
-           <b>Subordinate department commander rank:</b> Police Brigadier General / Police Colonel level
+            <strong>Role:</strong>&nbsp;Highest commander of the CNP
         </p>
         <p class="p-modal text-justify">
-           Cambodia Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
+            Exercises overall command, strategic leadership, and operational control of the CNP, implementing national internal security policies under the authority of the Minister of Interior.
         </p>
         <p class="p-modal text-justify">
-            Headquarters functions:
+            <strong>Responsibilities:</strong>
         </p>
         <ul>
-            <li>National command and control</li>
-            <li>Force administration and personnel management</li>
-            <li>Policy and standing-order implementation</li>
-            <li>Operational coordination</li>
-            <li>Criminal and security coordination</li>
-            <li>Training and doctrine development</li>
-            <li>Discipline, morale, and welfare supervision</li>
-            <li>Logistics, supply, finance, and support services</li>
-            <li>International police cooperation</li>
-            <li>Coordination with territorial and specialized police formations</li>
+            <li>Direct and supervise all national, specialized, and territorial police forces.</li>
+            <li>Formulate national policing strategies, operational priorities, and organizational policies.</li>
+            <li>Maintain public security, public order, and crime prevention throughout Cambodia.</li>
+            <li>Coordinate nationwide law enforcement operations and emergency responses.</li>
+            <li>Oversee criminal investigations and major security operations of national significance.</li>
+            <li>Manage personnel appointments, promotions, discipline, and professional standards across the CNP.</li>
+            <li>Represent the CNP before the Royal Government, foreign law enforcement agencies, and international organizations.</li>
+            <li>Advise the Minister of Interior on policing, public security, and internal security matters.</li>
+            <li>Ensure effective coordination between the CNP, the judiciary, the Royal Cambodian Armed Forces, and other government institutions.</li>
         </ul>
-        <p class="p-modal text-justify">
-            Major headquarters departments and national-level police bodies are normally led by senior officers at Police Colonel level or above. Larger or more sensitive national functions may be led at Police Brigadier General level.
-        </p>
       </div>
     </div>
   </div>
@@ -826,29 +863,40 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
              <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">State Police Force / Region Police Force</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Provincial Police</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            State Police Force / Region Police Force is the main territorial police command below MPF Headquarters. It translates national police policy into State or Region level policing operations and supervises police activity across its assigned territory.
+            <strong>Title:</strong>&nbsp;Provincial / Municipal Police Commissioner
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Brigadier General / Police Colonel level officer, depend on the size, location, and operational importance of the State or Region.
+            <strong>Command Level:</strong>&nbsp;Top territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Cambodia's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
+            <strong>Typical Head Rank:</strong>&nbsp;Police Brigadier General (1-star) or Police Major General (2-star)
         </p>
         <p class="p-modal text-justify">
-            Cambodia has seven States and seven Regions.
+            <strong>Administrative Equivalent:</strong>&nbsp;Provincial/Municipality level
+        </p>
+        <p class="p-modal text-justify">
+            Functions as the highest territorial command of the CNP within each province or the capital municipality, directing all policing, security, criminal investigation, and public order operations within its jurisdiction.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>Responsibilities:</strong>
         </p>
         <ul>
-            <li><b>States:</b> Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, and Shan State.</li>
-            <li><b>Regions:</b> Ayeyarwady Region, Bago Region, Magway Region, Mandalay Region, Sagaing Region, Tanintharyi Region, and Yangon Region.</li>
+            <li>Command and supervise all district police inspectorates within the province or municipality.</li>
+            <li>Implement national policing policies and operational directives.</li>
+            <li>Coordinate crime prevention, criminal investigations, and public order operations.</li>
+            <li>Manage emergency response and disaster-related policing activities.</li>
+            <li>Coordinate security for national events, elections, and VIP visits.</li>
+            <li>Cooperate with provincial and municipal governors and other government agencies.</li>
+            <li>Supervise personnel administration, logistics, and operational readiness within the jurisdiction.</li>
         </ul>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> State Police Force or Region Police Force is responsible for area level police command and territorial law enforcement coordination. Its functions include public order control, crime prevention, security reporting, investigation support, operational planning, inspection of subordinate units, personnel administration, and coordination with relevant civil administration and security bodies. This level consolidates reports from districts and townships, supervises local police operations, and transmits national level directives from MPF Headquarters to subordinate territorial commands.
+            Report operational developments and security assessments to the Commissioner-General.
         </p>
       </div>
     </div>
@@ -861,26 +909,39 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
              <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">District Police Force</h5>
+            <h5 class="modal-title" id="disclaimerLabel">District Police</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            District Police Force is the intermediate territorial command between the first-level area command and the Township Police Force. It provides supervision, coordination, reporting, and operational control across several townships in a District.
+            <strong>Title:</strong>&nbsp;District Police Inspector
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Lieutenant Colonel level officer.
+            <strong>Command Level:</strong>&nbsp;Second-tier territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> District Police Force is responsible for intermediate territorial police command across one District.
+            <strong>Typical Head Rank:</strong>&nbsp;Police Lieutenant Colonel or Police Colonel
         </p>
         <p class="p-modal text-justify">
-            A District is composed of multiple Townships. Districts sit below the State, Region, Nay Pyi Taw Union Territory, or relevant Self-Administered Area arrangement.
+            <strong>Administrative Equivalent:</strong>&nbsp;District level
         </p>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> District Police Force coordinates district law enforcement, supervises Township Police Forces, supports criminal investigations, manages public order deployments, consolidates operational reports, monitors local security conditions, and coordinates incidents that affect more than one township. It also ensures that township-level policing follows instructions from the relevant State, Region, Nay Pyi Taw, or Self-Administered Area command.
+            Directs and coordinates policing activities within a district by supervising commune police posts and implementing provincial policing priorities.
         </p>
+        <p class="p-modal text-justify">
+            <strong>Responsibilities:</strong>
+        </p>
+        <ul>
+            <li>Supervise commune police posts.</li>
+            <li>Conduct district-level law enforcement and crime prevention operations.</li>
+            <li>Coordinate criminal investigations within the district.</li>
+            <li>Maintain public order during local events and emergencies.</li>
+            <li>Support provincial police operations and specialized investigations.</li>
+            <li>Coordinate with district administrative authorities and local institutions.</li>
+            <li>Monitor crime trends and public security conditions.</li>
+            <li>Submit operational and intelligence reports to the Provincial or Municipal Police Commissariat.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -892,48 +953,39 @@
       <div class="modal-header">
         <div class="d-flex align-items-center">
              <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px;">
-            <h5 class="modal-title" id="disclaimerLabel">Township Police Force</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Commune Police Post</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            The Township Police Force is the main local command layer of the MPF. Connecting District-level supervision with frontline policing and manages the police units that directly serve towns, wards, village tracts, villages, and other local security areas.
+            <strong>Title:</strong>&nbsp;Chief of Commune Police Post
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Major / Police Captain-level officer.
+            <strong>Command Level:</strong>&nbsp;Third-tier territorial police command <em>(Frontline operational unit)</em>
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> The Township Police Force is responsible for local police command in one Township.
+            <strong>Typical Head Rank:</strong>&nbsp;Police Captain or Police Major
         </p>
         <p class="p-modal text-justify">
-            A Township may include towns, wards, village tracts, villages, roads, public facilities, local security points, Police Stations, Police Posts, and Police Guard Posts.
+            <strong>Administrative Equivalent:</strong>&nbsp;Communal level
         </p>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> The Township Police Force supervises Police Stations, Police Posts, and Police Guard Posts; coordinates patrols; receives crime and incident reports; supports investigations; manages local public-order operations; deploys personnel to checkpoints or guard duties; and reports operational developments to the District Police Force. It is the key command layer for managing police presence across both urban and rural areas.
+            Provides frontline policing services at the community level through preventive patrols, first-response law enforcement, community engagement, and maintenance of public order.
         </p>
         <p class="p-modal text-justify">
-            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Cambodia Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
+            <strong>Responsibilities:</strong>
         </p>
         <ul>
-            <li>
-                <b>Police Station</b>
-                <p class="p-modal text-justify">
-                    Police Station is the primary frontline police office responsible for routine law enforcement in a defined local area and is the main operational unit below the Township Police Force.
-                </p>
-                <b>Led by:</b> Police Captain / Police Lieutenant-level officer, depend on the station size, location, and operational importance.
-                <b>Area of responsibility:</b> Police Station is responsible for routine law enforcement and public police services in its assigned jurisdiction.
-                <p class="p-modal text-justify">
-                    Police Station may cover a town area, ward cluster, village tract group, road corridor, facility area, or other defined local policing zone.
-                </p>
-                <b>Responsibilities, role, and functions:</b> A Police Station handles frontline law enforcement, incident response, crime reporting, patrol operations, preliminary investigations, public-order support, detention and case-processing support, local security coordination, and reporting to the Township Police Force. It also serves as the main local point for public complaints, incident registration, criminal case support, and patrol coordination.
-            </li>
-            <li>
-                <b>Police Post / Police Guard Post</b>
-                <p class="p-modal text-justify">
-                    A Police Post or Police Guard Post is a small frontline police presence established to extend police coverage beyond the main Police Station. It supports local security, observation, reporting, and rapid response, but usually has more limited administrative and investigative capacity than a full Police Station
-                </p>
-            </li>
+            <li>Conduct routine patrols and visible police presence within the community.</li>
+            <li>Respond to emergencies, crimes, and public complaints.</li>
+            <li>Prevent and detect criminal activities.</li>
+            <li>Receive and process initial reports of criminal and public order incidents.</li>
+            <li>Carry out community policing and crime prevention programs.</li>
+            <li>Maintain peace and public order during local events.</li>
+            <li>Gather local intelligence and monitor community security issues.</li>
+            <li>Cooperate with commune authorities and community leaders to address local safety concerns.</li>
+            <li>Refer serious criminal investigations to the District Police Inspectorate or specialized investigative units as appropriate.</li>
         </ul>
       </div>
     </div>
@@ -1044,273 +1096,179 @@
   </div>
 </div>
 
-<div class="modal fade" id="level11Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+<div class="modal fade medical-facility-modal" id="level11Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
          <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">Medium Hospital / Polyclinic HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Small Private Hospital</h5>
          </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Medium Hospital / Polyclinic Hospital is a low-capacity facility offering basic inpatient and outpatient services, often functioning similarly to an expanded clinic. It primarily supports primary-level care.
-            </p>
-            <p class="text-justify">
-                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Cambodia are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphaCambodia.org/" target="_blank"> Cambodia Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+        <ul class="nav nav-tabs mb-3" id="level11-medical-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="level11-medical-overview-tab" data-bs-toggle="tab" data-bs-target="#level11-medical-overview" type="button" role="tab" aria-controls="level11-medical-overview" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level11-medical-role-tab" data-bs-toggle="tab" data-bs-target="#level11-medical-role" type="button" role="tab" aria-controls="level11-medical-role" aria-selected="false">Role</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level11-medical-clinical-services-tab" data-bs-toggle="tab" data-bs-target="#level11-medical-clinical-services" type="button" role="tab" aria-controls="level11-medical-clinical-services" aria-selected="false">Clinical Services</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="level11-medical-tab-content">
+            <div class="tab-pane fade show active" id="level11-medical-overview" role="tabpanel" aria-labelledby="level11-medical-overview-tab" tabindex="0">
+                <p class="text-justify">
+                    Small Private Hospitals and specialized Maternity Clinic (Pregnancy Care Room) provide basic inpatient and emergency care services. They function as a primary-to-basic-secondary care provider. They focus on general medical treatment, uncomplicated maternal care, minor procedures, and short-term admissions. Complex cases or patients requiring major surgery are stabilized and referred to larger hospitals.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level11-medical-role" role="tabpanel" aria-labelledby="level11-medical-role-tab" tabindex="0">
                 <ul>
-                    <li>Provide basic medical care and minor procedures</li>
-                    <li>Serve local community healthcare needs</li>
-                    <li>Refer most moderate and complex cases to higher-level hospitals</li>
+                    <li><strong>Primary &amp; Basic Secondary Care:</strong> Provides local inpatient and outpatient medical care, managing common conditions and short-stay admissions.</li>
+                    <li class="mt-2"><strong>Maternal &amp; Child Services:</strong> Specialized maternity clinics offer focused antenatal care, normal spontaneous deliveries, and postnatal services.</li>
+                    <li class="mt-2"><strong>Emergency Stabilization:</strong> Offers basic 24-hour emergency stabilization prior to upward referral.</li>
                 </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, typically <50 beds</li>
-                    <li>
-                        <strong>Core Services</strong>
-                        <ul>
-                            <li>General practice / basic internal medicine</li>
-                            <li>Minor surgical procedures</li>
-                            <li>Basic maternal and child health services</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Limitations</strong>
-                        <ul>
-                            <li>No advanced specialist services</li>
-	                        <li>No complex surgical capability</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Basic laboratory services (comparable to Type C) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                            <li>Basic imaging (limited or none)</li>
-                            <li>No advanced diagnostics</li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
+                <p class="text-justify">
+                    Small Private Hospitals provide medical services and maintain infrastructures comparable to those of the BASIC District Referral Hospitals (CPA1) and Health Centers.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level11-medical-clinical-services" role="tabpanel" aria-labelledby="level11-medical-clinical-services-tab" tabindex="0">
+                <h5 class="fw-bold" style="color:#3c8dbc;">Cambodia Government Health System &amp; Financing</h5>
+                <p class="text-justify">
+                    Cambodia’s health system financing relies on a mix of government funding, donor support, and social health protection schemes, though Out-Of-Pocket (OOP) spending remains the largest source of health expenditure (accounting for approximately 60%). The government is actively expanding coverage to achieve Universal Health Coverage (UHC) through the following mechanisms:
+                </p>
+
+                <h6 class="fw-bold mt-3">Health Equity Funds (HEF)</h6>
+                <p class="text-justify">
+                    A critical social protection scheme designed to provide free access to public health services for the poorest and most vulnerable populations. The government or donors reimburse public facilities for the care provided to HEF beneficiaries, significantly reducing the barrier of cost for the poor at Health Centers and Referral Hospitals.
+                </p>
+
+                <h6 class="fw-bold mt-3">National Social Security Fund (NSSF)</h6>
+                <p class="text-justify">
+                    A contributory social health insurance scheme that primarily covers formal sector workers, civil servants, and veterans. NSSF finances employment injury benefits and broader health care services, contracting with both public and accredited private health facilities.
+                </p>
+
+                <h6 class="fw-bold mt-3">Out-Of-Pocket (OOP) Spending</h6>
+                <p class="text-justify">
+                    Despite expansion in HEF and NSSF, many Cambodians still rely heavily on OOP payments, primarily driven by a strong cultural preference for utilizing private clinics and pharmacies for initial care before transitioning to the public sector for more severe or prolonged illnesses.
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="level22Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+<div class="modal fade medical-facility-modal" id="level22Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
          <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-orange.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">PRIMARY HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">District (CPA1) / Health Center (MPA)</h5>
          </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                District Hospital (Primary)
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Primary-Level District Hospital refers to smaller or less-developed district hospitals that is closer to township-level capability, providing basic hospital services.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+        <ul class="nav nav-tabs mb-3" id="level22-medical-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="level22-medical-overview-tab" data-bs-toggle="tab" data-bs-target="#level22-medical-overview" type="button" role="tab" aria-controls="level22-medical-overview" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level22-medical-role-tab" data-bs-toggle="tab" data-bs-target="#level22-medical-role" type="button" role="tab" aria-controls="level22-medical-role" aria-selected="false">Role</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level22-medical-clinical-services-tab" data-bs-toggle="tab" data-bs-target="#level22-medical-clinical-services" type="button" role="tab" aria-controls="level22-medical-clinical-services" aria-selected="false">Clinical Services</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="level22-medical-tab-content">
+            <div class="tab-pane fade show active" id="level22-medical-overview" role="tabpanel" aria-labelledby="level22-medical-overview-tab" tabindex="0">
+                <h5 class="fw-bold" style="color:#3c8dbc;">District Referral Hospital (CPA1)</h5>
+                <p class="text-justify">
+                    The CPA1 Referral Hospital provides the most basic level of secondary care. While it serves as a referral point within the Operational District, its surgical and critical care capabilities are strictly limited compared to CPA2 and CPA3 facilities.
+                </p>
+
+                <h5 class="fw-bold mt-3" style="color:#3c8dbc;">Health Center (MPA)</h5>
+                <p class="text-justify">
+                    Health Centers (HC) are the frontline primary care facilities in Cambodia, delivering the Minimum Package of Activities (MPA). Designed to serve an optimal catchment size of 10,000 people (within a 10-km radius or 2 hours walking distance), they are the critical first point of contact for the community. HCs focus heavily on outpatient care, preventive medicine, and community outreach.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level22-medical-role" role="tabpanel" aria-labelledby="level22-medical-role-tab" tabindex="0">
                 <ul>
-                    <li>Provide first-line hospital care</li>
-                    <li>Manage common medical conditions</li>
-                    <li>Refer patients to Provincial (CPA3) / District (CPA2) hospitals</li>
+                    <li>First-contact point for basic healthcare needs, health education, and disease prevention.</li>
+                    <li>Provide maternal, newborn, child, and reproductive health services.</li>
+                    <li>Manage the screening and initial treatment of communicable diseases (HIV/AIDS, TB, Malaria, Dengue) and Non-Communicable Diseases (NCDs like Diabetes and Hypertension).</li>
+                    <li>Coordinate community outreach programs and refer complicated cases to Referral Hospitals.</li>
                 </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
+            </div>
+            <div class="tab-pane fade" id="level22-medical-clinical-services" role="tabpanel" aria-labelledby="level22-medical-clinical-services-tab" tabindex="0">
+                <h5 class="fw-bold" style="color:#3c8dbc;">District Referral Hospital (CPA1)</h5>
+                <h6 class="fw-bold">Clinical &amp; Diagnostic Limitations</h6>
                 <ul>
-                    <li>Bed Capacity, approximately 50–100 beds</li>
                     <li>
-                        <strong>Basic Services</strong>
+                        <strong>No Major Surgery</strong>
                         <ul>
-                            <li>General medicine</li>
-                            <li>Minor surgery</li>
-                            <li>Maternal and child health</li>
+                            <li>CPA1 hospitals do not perform major surgeries and do not provide general anesthesia.</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
+                        <strong>Obstetric Focus</strong>
                         <ul>
-                            <li>Type C Basic laboratory services <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
-            <p class="text-justify">
-                <b><U>Note:</u></b> A District Hospital is classified as Primary when it has limited capability, minimal specialist services, and functions similarly to a large township hospital.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Township Hospital (Primary)
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Township Hospital is the main primary-level hospital, and is the first referral level within the public health system.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Provide primary hospital care</li>
-                    <li>Manage common and moderate conditions</li>
-                    <li>Refer patients to district and state hospitals</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, approximately 25–100 beds</li>
-                    <li>
-                        <strong>Core Services</strong>
-                        <ul>
-                            <li>General medicine</li>
-                            <li>Basic surgery</li>
-                            <li>Obstetrics & Gynecology</li>
-                            <li>Pediatrics</li>
+                            <li>They provide basic obstetric services and emergency stabilization.</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
+                        <strong>No Blood Transfusion</strong>
                         <ul>
-                            <li>Basic laboratory (Type C) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                            <li>Basic imaging (X-ray in some facilities) </li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Station Hospital (Primary)
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Station Hospital is the lowest-level hospital facility, typically located in rural or remote areas, providing essential healthcare services.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Serve as first contact healthcare facility</li>
-                    <li>Provide basic medical services</li>
-                    <li>Refer patients to township hospitals</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, approximately 16–25 beds</li>
-                    <li>
-                        <strong>Basic Services</strong>
-                        <ul>
-                            <li>Outpatient and limited inpatient care</li>
-                            <li>Maternal and child health</li>
-                            <li>Basic treatment and stabilization</li>
+                            <li>CPA1 facilities do not have blood depots or blood banks.</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
+                        <strong>Diagnostics</strong>
                         <ul>
-                            <li>Basic laboratory testing <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                            <li>Minimal diagnostic capability  </li>
+                            <li>Limited to basic laboratory tests and imagery.</li>
                         </ul>
                     </li>
                 </ul>
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Cambodia GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Cambodia does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Cambodia, which provides the following cover:
+
+                <h5 class="fw-bold mt-3" style="color:#3c8dbc;">Health Center (MPA)</h5>
+                <h6 class="fw-bold">Clinical Services &amp; Staffing</h6>
                 <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
+                    <li><strong>Inpatient Care:</strong> Generally no inpatient admission; designed for outpatient consultation and short-stay observation.</li>
+                    <li class="mt-2"><strong>Staffing Standard:</strong> A standard HC requires at least 8-11 personnel, typically comprising 1 Medical Doctor/Assistant, 1-2 Secondary Midwives, 1-2 Primary Midwives, 2 Secondary Nurses, and 2 Primary Nurses.</li>
+                    <li class="mt-2"><strong>First Aid &amp; Stabilization:</strong> Capable of providing basic life support and stabilizing urgent cases (e.g., bleeding, shock, snakebites, burns) before referral using the HC's ambulance arrangement.</li>
                 </ul>
-                As a result, a significant proportion of the population in Cambodia continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Cambodia</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Cambodia’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
-            </p>
+
+                <h5 class="fw-bold mt-4" style="color:#3c8dbc;">Cambodia Government Health System &amp; Financing</h5>
+                <p class="text-justify">
+                    Cambodia’s health system financing relies on a mix of government funding, donor support, and social health protection schemes, though Out-Of-Pocket (OOP) spending remains the largest source of health expenditure (accounting for approximately 60%). The government is actively expanding coverage to achieve Universal Health Coverage (UHC) through the following mechanisms:
+                </p>
+
+                <h6 class="fw-bold mt-3">Health Equity Funds (HEF)</h6>
+                <p class="text-justify">
+                    A critical social protection scheme designed to provide free access to public health services for the poorest and most vulnerable populations. The government or donors reimburse public facilities for the care provided to HEF beneficiaries, significantly reducing the barrier of cost for the poor at Health Centers and Referral Hospitals.
+                </p>
+
+                <h6 class="fw-bold mt-3">National Social Security Fund (NSSF)</h6>
+                <p class="text-justify">
+                    A contributory social health insurance scheme that primarily covers formal sector workers, civil servants, and veterans. NSSF finances employment injury benefits and broader health care services, contracting with both public and accredited private health facilities.
+                </p>
+
+                <h6 class="fw-bold mt-3">Out-Of-Pocket (OOP) Spending</h6>
+                <p class="text-justify">
+                    Despite expansion in HEF and NSSF, many Cambodians still rely heavily on OOP payments, primarily driven by a strong cultural preference for utilizing private clinics and pharmacies for initial care before transitioning to the public sector for more severe or prolonged illnesses.
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="level33Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+<div class="modal fade medical-facility-modal" id="level33Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
          <div class="d-flex align-items-center">
@@ -1320,65 +1278,62 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Medium Hospital / Polyclinic Hospital is a moderate-capacity facility providing general and selected specialist services. It primarily supports Provincial (CPA3) / District (CPA2)-level care, managing common and moderately complex conditions.
-            </p>
-            <p class="text-justify">
-                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Cambodia are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphaCambodia.org/" target="_blank">Cambodia Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+        <ul class="nav nav-tabs mb-3" id="level33-medical-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="level33-medical-overview-tab" data-bs-toggle="tab" data-bs-target="#level33-medical-overview" type="button" role="tab" aria-controls="level33-medical-overview" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level33-medical-role-tab" data-bs-toggle="tab" data-bs-target="#level33-medical-role" type="button" role="tab" aria-controls="level33-medical-role" aria-selected="false">Role</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level33-medical-clinical-services-tab" data-bs-toggle="tab" data-bs-target="#level33-medical-clinical-services" type="button" role="tab" aria-controls="level33-medical-clinical-services" aria-selected="false">Clinical Services</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="level33-medical-tab-content">
+            <div class="tab-pane fade show active" id="level33-medical-overview" role="tabpanel" aria-labelledby="level33-medical-overview-tab" tabindex="0">
+                <p class="text-justify">
+                    Medium Private Hospitals or polyclinics provide structured secondary care services within urban or semi-urban settings. They manage common inpatient and surgical cases and offers broad specialist consultations. Their role is to provide accessible private-sector hospital care for routine and moderately complex conditions, while referring highly specialized cases to larger tertiary centers.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level33-medical-role" role="tabpanel" aria-labelledby="level33-medical-role-tab" tabindex="0">
                 <ul>
-                    <li>Provide general inpatient and outpatient care</li>
-                    <li>Manage routine and moderate-complexity medical and surgical cases</li>
-                    <li>Refer complex cases to larger private or public hospitals</li>
+                    <li><strong>Deliver Secondary Care:</strong> Provide multi-specialty outpatient and inpatient medical and surgical services.</li>
+                    <li class="mt-2"><strong>Provide 24-Hour Emergency &amp; Limited Critical Care:</strong> Operate emergency services with stabilization capabilities and basic Intensive Care Unit (ICU) capacity.</li>
+                    <li class="mt-2"><strong>Conduct Surgical Services:</strong> Perform general surgeries and procedures requiring general anesthesia within the facility's capability.</li>
                 </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, typically 50–150 beds</li>
-                    <li>
-                        <strong>Core Specialties</strong>
-                        <ul>
-                            <li>Internal Medicine</li>
-                            <li>General Surgery</li>
-                            <li>Obstetrics & Gynecology</li>
-                            <li>Pediatrics</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Available Services </strong>
-                        <ul>
-                            <li>Basic ICU or high-dependency units (limited)</li>
-                            <li>Basic surgical procedures</li>
-                            <li>Routine emergency care</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Laboratory services (comparable to Type B) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                            <li>Basic imaging (X-ray, ultrasound)</li>
-                            <li>Limited advanced diagnostics</li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
+                <p class="text-justify">
+                    Medium Private Hospitals provide medical services and maintain infrastructures comparable to those of the INTERMEDIATE Provincial (CPA3) and District Referral Hospitals (CPA2).
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level33-medical-clinical-services" role="tabpanel" aria-labelledby="level33-medical-clinical-services-tab" tabindex="0">
+                <h5 class="fw-bold" style="color:#3c8dbc;">Cambodia Government Health System &amp; Financing</h5>
+                <p class="text-justify">
+                    Cambodia’s health system financing relies on a mix of government funding, donor support, and social health protection schemes, though Out-Of-Pocket (OOP) spending remains the largest source of health expenditure (accounting for approximately 60%). The government is actively expanding coverage to achieve Universal Health Coverage (UHC) through the following mechanisms:
+                </p>
+
+                <h6 class="fw-bold mt-3">Health Equity Funds (HEF)</h6>
+                <p class="text-justify">
+                    A critical social protection scheme designed to provide free access to public health services for the poorest and most vulnerable populations. The government or donors reimburse public facilities for the care provided to HEF beneficiaries, significantly reducing the barrier of cost for the poor at Health Centers and Referral Hospitals.
+                </p>
+
+                <h6 class="fw-bold mt-3">National Social Security Fund (NSSF)</h6>
+                <p class="text-justify">
+                    A contributory social health insurance scheme that primarily covers formal sector workers, civil servants, and veterans. NSSF finances employment injury benefits and broader health care services, contracting with both public and accredited private health facilities.
+                </p>
+
+                <h6 class="fw-bold mt-3">Out-Of-Pocket (OOP) Spending</h6>
+                <p class="text-justify">
+                    Despite expansion in HEF and NSSF, many Cambodians still rely heavily on OOP payments, primarily driven by a strong cultural preference for utilizing private clinics and pharmacies for initial care before transitioning to the public sector for more severe or prolonged illnesses.
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="level44Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+<div class="modal fade medical-facility-modal" id="level44Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
          <div class="d-flex align-items-center">
@@ -1388,309 +1343,182 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                General Hospital (Provincial (CPA3) / District (CPA2) - At the Regional / State or District-Level)
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Provincial (CPA3) / District (CPA2)-Level General Hospital in Cambodia refers to general hospitals located outside major cities, typically at the state/regional or district level. These hospitals provide broad multi-specialty services but do not possess full National (CPA3+)-level subspecialty capability.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+        <ul class="nav nav-tabs mb-3" id="level44-medical-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="level44-medical-overview-tab" data-bs-toggle="tab" data-bs-target="#level44-medical-overview" type="button" role="tab" aria-controls="level44-medical-overview" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level44-medical-role-tab" data-bs-toggle="tab" data-bs-target="#level44-medical-role" type="button" role="tab" aria-controls="level44-medical-role" aria-selected="false">Role</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level44-medical-clinical-services-tab" data-bs-toggle="tab" data-bs-target="#level44-medical-clinical-services" type="button" role="tab" aria-controls="level44-medical-clinical-services" aria-selected="false">Clinical Services</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="level44-medical-tab-content">
+            <div class="tab-pane fade show active" id="level44-medical-overview" role="tabpanel" aria-labelledby="level44-medical-overview-tab" tabindex="0">
+                <p class="text-justify">
+                    Intermediate facilities are secondary care referral hospitals located at the provincial or district level. They are governed by the Operational District (OD) framework and provide the Complementary Package of Activities (CPA). A CPA3 hospital operates primarily at the provincial level and offers more specialized services than a CPA2 hospital, which operates at the district level. Both play a central role in emergency care, surgical interventions, and inpatient management.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level44-medical-role" role="tabpanel" aria-labelledby="level44-medical-role-tab" tabindex="0">
                 <ul>
-                    <li>Regional referral centers for township and station hospitals</li>
-                    <li>Provide multi-specialty care for moderate to complex conditions</li>
-                    <li>Stabilize and refer advanced cases to National (CPA3+) hospitals</li>
-                    <li>Support regional healthcare delivery and workforce training</li>
+                    <li>Act as the primary referral destination for Health Centers within their Operational District (optimal catchment of 100,000 population).</li>
+                    <li>Provide comprehensive secondary medical and surgical services to manage moderate to complex conditions.</li>
+                    <li>Provide clinical training and supportive supervision to Health Centers and Health Posts.</li>
+                    <li>Stabilize and refer highly complex or tertiary-level cases to National Hospitals.</li>
                 </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
+            </div>
+            <div class="tab-pane fade" id="level44-medical-clinical-services" role="tabpanel" aria-labelledby="level44-medical-clinical-services-tab" tabindex="0">
                 <ul>
-                    <li>Bed Capacity, approximately 100–500 beds</li>
                     <li>
+                        <strong>Bed Capacity</strong>
+                        <ul>
+                            <li>Approximately 100–250 beds.</li>
+                        </ul>
+                    </li>
+                    <li class="mt-2">
                         <strong>Core Specialties</strong>
                         <ul>
-                            <li>Internal Medicine</li>
-                            <li>General Surgery</li>
-                            <li>Obstetrics & Gynecology</li>
+                            <li>General Medicine</li>
+                            <li>Surgery</li>
                             <li>Pediatrics</li>
-                            <li>Orthopedics</li>
+                            <li>Gynecology &amp; Obstetrics</li>
+                            <li>
+                                Specialized services
+                                <ul>
+                                    <li>Otolaryngology (Ear, Nose, and Throat)</li>
+                                    <li>Ophthalmology</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Intermediate Services </strong>
+                        <strong>Emergency &amp; Critical Care</strong>
                         <ul>
-                            <li>Basic ICU / High Dependency Unit (HDU)</li>
-                            <li>Emergency care services</li>
-                            <li>Selected specialist services</li>
+                            <li>24-hour Emergency Department</li>
+                            <li>Basic Intensive Care Unit (ICU).</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Surgical & Procedural Capacity </strong>
+                        <strong>Surgical Capacity</strong>
                         <ul>
-                            <li>Standard elective and emergency surgeries</li>
-                            <li>Basic trauma center</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Imaging: X-ray, Ultrasound, CT Scan (in most facilities)</li>
-                            <li>Type B / Type A Laboratory (level depending on facility) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a> </li>
+                            <li>Both CPA2 and CPA3 operate theatres to perform major surgeries requiring general anesthesia.</li>
                         </ul>
                     </li>
                 </ul>
-            </p>
-            <p class="text-justify">
-                <b><U>Note:</u></b> A General Hospital is classified as Provincial (CPA3) / District (CPA2) when it is a regional (not national) referral center, has limited subspecialty coverage, and lacks the full advanced capabilities of National (CPA3+) hospitals.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Regional / State Hospital (Provincial (CPA3) / District (CPA2))
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Regional/State Hospital is a core Provincial (CPA3) / District (CPA2)-level facility by definition in Cambodia’s health system. It is designed to function as the main referral hospital in a state or region, providing expanded clinical services beyond district level.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+
+                <h6 class="fw-bold mt-3">Diagnostic &amp; Support Infrastructure</h6>
                 <ul>
-                    <li>Primary referral center within a state or region</li>
-                    <li>Provide expanded specialist services</li>
-                    <li>Support district and township hospitals</li>
-                    <li>Contribute to regional training and service delivery</li>
-                </ul>
-            </p>
-             <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, approximately 200–500 beds</li>
                     <li>
-                        <strong>Core and Selected Specialties</strong>
+                        <strong>Imaging &amp; Laboratory</strong>
                         <ul>
-                            <li>Internal Medicine</li>
-                            <li>General Surgery</li>
-                            <li>Obstetrics & Gynecology</li>
-                            <li>Pediatrics</li>
-                            <li>Orthopedics</li>
-                            <li>Anesthesiology</li>
+                            <li>Standard 24/7 laboratory services</li>
+                            <li>X-ray</li>
+                            <li>Ultrasound</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Intermediate Services </strong>
+                        <strong>Blood Services</strong>
                         <ul>
-                            <li>ICU and emergency services</li>
-                            <li>Expanded diagnostic capabilities</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Imaging (X-ray, Ultrasound, CT in most facilities)</li>
-                            <li>Laboratory (Type B / Type A level depending on facility) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
+                            <li>CPA3 hospitals operate a Blood Bank</li>
+                            <li>CPA2 hospitals operate a Blood Depot (blood storage and basic transfusion capability)</li>
                         </ul>
                     </li>
                 </ul>
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                District Hospital (Provincial (CPA3) / District (CPA2))
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A District Hospital classified as a Provincial (CPA3) / District (CPA2) facility represents an upgraded district-level facility with expanded services and capacity, and is an intermediate referral center.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Township hospitals referral center</li>
-                    <li>Manage moderate to complex medical conditions</li>
-                    <li>Provide stabilization and referral to higher-level hospitals</li>
-                </ul>
-            </p>
-             <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, approximately 100–200+ beds</li>
-                    <li>
-                        <strong>Core Specialties</strong>
-                        <ul>
-                            <li>Internal Medicine</li>
-                            <li>General Surgery</li>
-                            <li>Obstetrics & Gynecology</li>
-                            <li>Pediatrics</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Intermediate Services </strong>
-                        <ul>
-                            <li>Limited ICU capability (in upgraded facilities)</li>
-                            <li>Emergency and inpatient care</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Imaging (X-ray, limited CT in some cases)</li>
-                            <li>Type B Laboratory (Type B / Type A level depending on facility) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
-            <p class="text-justify">
-                <b><u>Note:</u></b> A District Hospital is classified as Provincial (CPA3) / District (CPA2) when it has higher bed capacity, expanded clinical services, and a defined referral role for surrounding township hospitals.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Cambodia GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Cambodia does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Cambodia, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-                As a result, a significant proportion of the population in Cambodia continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Cambodia</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Cambodia’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
-            </p>
+
+                <h5 class="fw-bold mt-4" style="color:#3c8dbc;">Cambodia Government Health System &amp; Financing</h5>
+                <p class="text-justify">
+                    Cambodia’s health system financing relies on a mix of government funding, donor support, and social health protection schemes, though Out-Of-Pocket (OOP) spending remains the largest source of health expenditure (accounting for approximately 60%). The government is actively expanding coverage to achieve Universal Health Coverage (UHC) through the following mechanisms:
+                </p>
+
+                <h6 class="fw-bold mt-3">Health Equity Funds (HEF)</h6>
+                <p class="text-justify">
+                    A critical social protection scheme designed to provide free access to public health services for the poorest and most vulnerable populations. The government or donors reimburse public facilities for the care provided to HEF beneficiaries, significantly reducing the barrier of cost for the poor at Health Centers and Referral Hospitals.
+                </p>
+
+                <h6 class="fw-bold mt-3">National Social Security Fund (NSSF)</h6>
+                <p class="text-justify">
+                    A contributory social health insurance scheme that primarily covers formal sector workers, civil servants, and veterans. NSSF finances employment injury benefits and broader health care services, contracting with both public and accredited private health facilities.
+                </p>
+
+                <h6 class="fw-bold mt-3">Out-Of-Pocket (OOP) Spending</h6>
+                <p class="text-justify">
+                    Despite expansion in HEF and NSSF, many Cambodians still rely heavily on OOP payments, primarily driven by a strong cultural preference for utilizing private clinics and pharmacies for initial care before transitioning to the public sector for more severe or prolonged illnesses.
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="level55Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+<div class="modal fade medical-facility-modal" id="level55Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
             <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">Large Hospital HOSPITAL</h5>
+            <h5 class="modal-title" id="disclaimerLabel">Large Private Hospital</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Large Hospital Hospital in Cambodia is a high-capacity, multi-specialty facility that provides comprehensive Provincial (CPA3) / District (CPA2) to limited National (CPA3+)-level care. These hospitals are typically located in major urban centers and are equipped with advanced medical technology and a wide range of specialist services.
-            </p>
-            <p class="text-justify">
-                <b><u>Note:</u></b> Unlike public hospitals, private hospitals in Cambodia are not formally classified into tiers by the government. Instead, they are regulated under licensing frameworks and industry standards (e.g., <a href="https://www.mphaCambodia.org/" target="_blank">Cambodia Private Hospitals’ Association</a>), while their functional classification is analytically derived based on bed capacity, clinical capability, diagnostic infrastructure, and specialist availability.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+        <ul class="nav nav-tabs mb-3" id="level55-medical-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="level55-medical-overview-tab" data-bs-toggle="tab" data-bs-target="#level55-medical-overview" type="button" role="tab" aria-controls="level55-medical-overview" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level55-medical-role-tab" data-bs-toggle="tab" data-bs-target="#level55-medical-role" type="button" role="tab" aria-controls="level55-medical-role" aria-selected="false">Role</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level55-medical-clinical-services-tab" data-bs-toggle="tab" data-bs-target="#level55-medical-clinical-services" type="button" role="tab" aria-controls="level55-medical-clinical-services" aria-selected="false">Clinical Services</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="level55-medical-tab-content">
+            <div class="tab-pane fade show active" id="level55-medical-overview" role="tabpanel" aria-labelledby="level55-medical-overview-tab" tabindex="0">
+                <p class="text-justify">
+                    A Large Private Hospital in Cambodia is a high-capacity facility delivering advanced tertiary-level services within the private sector. They function as major private-sector healthcare hubs and strive to meet the highest Cambodian Hospital Accreditation Standards (CHAS), including high-resource "stretch standards." Operating under a license from the Ministry of Health (MOH), it typically serve urban populations, expatriates, and international patients, offering direct access without referral restrictions.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level55-medical-role" role="tabpanel" aria-labelledby="level55-medical-role-tab" tabindex="0">
                 <ul>
-                    <li>Provide advanced diagnostic and therapeutic services across multiple specialties</li>
-                    <li>Function as major private referral centers for complex cases</li>
-                    <li>Offer an alternative to public National (CPA3+) hospitals for high-end care</li>
+                    <li><strong>Deliver Advanced Tertiary Care:</strong> Provide comprehensive multi-specialty and subspecialty medical and surgical services for complex conditions.</li>
+                    <li class="mt-2"><strong>Operate Full Emergency &amp; Critical Care Services:</strong> Maintain 24-hour emergency departments and fully equipped Intensive Care Units (ICU) and Neonatal ICUs (NICU).</li>
+                    <li class="mt-2"><strong>Provide Advanced Surgical Procedures:</strong> Conduct major complex surgeries using general anesthesia in state-of-the-art operating theaters.</li>
                 </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, typically 150–500+ beds</li>
-                    <li>
-                        <strong>Core and Advanced Specialties</strong>
-                        <ul>
-                            <li>Internal Medicine (with subspecialties)</li>
-                            <li>General Surgery</li>
-                            <li>Orthopedic Surgery</li>
-                            <li>Obstetrics & Gynecology</li>
-                            <li>Pediatrics</li>
-                            <li>Cardiology</li>
-                            <li>Neurology</li>
-                            <li>Oncology (in some facilities)</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Advanced Services </strong>
-                        <ul>
-                            <li>Intensive Care Units (ICU, NICU)</li>
-                            <li>Advanced imaging (CT, MRI)</li>
-                            <li>Cardiac diagnostics and procedures</li>
-                            <li>Endoscopy and minimally invasive surgery</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Full laboratory services (comparable to Type A/B) <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                            <li>Comprehensive imaging services</li>
-                            <li>24/7 emergency services</li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
+                <p class="text-justify">
+                    Large private hospitals provide comprehensive specialist and subspecialist services and are equipped with diagnostic and support infrastructures comparable to the Advanced National Hospitals (CPA3+).
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level55-medical-clinical-services" role="tabpanel" aria-labelledby="level55-medical-clinical-services-tab" tabindex="0">
+                <h5 class="fw-bold" style="color:#3c8dbc;">Cambodia Government Health System &amp; Financing</h5>
+                <p class="text-justify">
+                    Cambodia’s health system financing relies on a mix of government funding, donor support, and social health protection schemes, though Out-Of-Pocket (OOP) spending remains the largest source of health expenditure (accounting for approximately 60%). The government is actively expanding coverage to achieve Universal Health Coverage (UHC) through the following mechanisms:
+                </p>
+
+                <h6 class="fw-bold mt-3">Health Equity Funds (HEF)</h6>
+                <p class="text-justify">
+                    A critical social protection scheme designed to provide free access to public health services for the poorest and most vulnerable populations. The government or donors reimburse public facilities for the care provided to HEF beneficiaries, significantly reducing the barrier of cost for the poor at Health Centers and Referral Hospitals.
+                </p>
+
+                <h6 class="fw-bold mt-3">National Social Security Fund (NSSF)</h6>
+                <p class="text-justify">
+                    A contributory social health insurance scheme that primarily covers formal sector workers, civil servants, and veterans. NSSF finances employment injury benefits and broader health care services, contracting with both public and accredited private health facilities.
+                </p>
+
+                <h6 class="fw-bold mt-3">Out-Of-Pocket (OOP) Spending</h6>
+                <p class="text-justify">
+                    Despite expansion in HEF and NSSF, many Cambodians still rely heavily on OOP payments, primarily driven by a strong cultural preference for utilizing private clinics and pharmacies for initial care before transitioning to the public sector for more severe or prolonged illnesses.
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="level66Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+<div class="modal fade medical-facility-modal" id="level66Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
@@ -1700,261 +1528,123 @@
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <p class="text-justify">
-                A National (CPA3+) Public Hospital in Cambodia represents the highest level of care, typically consisting of major city General Hospitals, Teaching Hospitals, and Specialist Hospitals located in key urban centers including Yangon, Mandalay, and Nay Pyi Taw. These hospitals are national referral centers, managing the most complex and specialized medical conditions while also being hubs for medical education and research.
-                However, a General Hospital is a hospital type rather than a fixed level of care, and is categorized as being either Provincial (CPA3) / District (CPA2) or National (CPA3+) depending on its bed capacity, clinical capability, specialist, and subspecialist availability, and referral role.
-                National (CPA3+) General Hospitals are typically large facilities (above ≈500 beds) with full subspecialty coverage, advanced diagnostics (e.g., MRI, CT, specialized laboratories), and the ability to perform complex procedures including cardiac or neurosurgery. National (CPA3+) General Hospitals are national referral centers and are mostly located in major cities, including Yangon, Mandalay, and Nay Pyi Taw.
-                In contrast, Provincial (CPA3) / District (CPA2) General Hospitals are usually smaller (≈50 – 500 beds), provide core specialties with limited subspecialty, and manage moderate-complexity cases while referring advanced cases upward. Provincial (CPA3) / District (CPA2) General Hospitals typically are regional referral centers and are commonly located at the state/regional or district level.
-                Consistent with Ministry of Health and Sports (MOHS) guidance, classification is determined by service capability and referral function, not by the hospital name itself. A General Hospital is classified as National (CPA3+) when it operates as a high-capability national referral center, and Provincial (CPA3) / District (CPA2) when it is operating as a regional-level facility with more limited scope of care.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                General Hospitals (National (CPA3+) - Major City)
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Major City General Hospital is a large, multi-specialty National (CPA3+) hospital located in major urban centers including Yangon, Mandalay, and Nay Pyi Taw. It provides comprehensive clinical services across all major disciplines and functions as a national referral center, managing a wide spectrum of complex medical and surgical cases.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
+        <ul class="nav nav-tabs mb-3" id="level66-medical-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="level66-medical-overview-tab" data-bs-toggle="tab" data-bs-target="#level66-medical-overview" type="button" role="tab" aria-controls="level66-medical-overview" aria-selected="true">Overview</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level66-medical-role-tab" data-bs-toggle="tab" data-bs-target="#level66-medical-role" type="button" role="tab" aria-controls="level66-medical-role" aria-selected="false">Role</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="level66-medical-clinical-services-tab" data-bs-toggle="tab" data-bs-target="#level66-medical-clinical-services" type="button" role="tab" aria-controls="level66-medical-clinical-services" aria-selected="false">Clinical Services</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="level66-medical-tab-content">
+            <div class="tab-pane fade show active" id="level66-medical-overview" role="tabpanel" aria-labelledby="level66-medical-overview-tab" tabindex="0">
+                <p class="text-justify">
+                    The National Hospital is the highest-tier medical facility in Cambodia's public health system under the Ministry of Health (MOH). Providing Complementary Package of Activities (CPA) level 3+, these facilities serve as the ultimate tertiary referral centers. They deliver comprehensive specialist and subspecialist services, complex surgeries, and advanced diagnostics. They also function as major teaching and training institutions for health professionals.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="level66-medical-role" role="tabpanel" aria-labelledby="level66-medical-role-tab" tabindex="0">
                 <ul>
-                    <li>National referral centers for complex and critical cases</li>
-                    <li>Provide advanced and subspecialty medical care</li>
-                    <li>Function as teaching and training institutions for doctors and specialists</li>
-                    <li>Lead clinical research and advanced medical innovation</li>
-                    <li>Support lower-level hospitals through referral and technical guidance</li>
+                    <li>Serve as the highest referral authority for complex and severe medical cases within the MOH network.</li>
+                    <li>Provide specialized medical, surgical, pediatric (e.g., Kantha Bopha), and maternal care.</li>
+                    <li>Function as a primary teaching and training center for medical professionals.</li>
+                    <li>Lead national outbreak responses and manage severe health security emergencies.</li>
                 </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
+            </div>
+            <div class="tab-pane fade" id="level66-medical-clinical-services" role="tabpanel" aria-labelledby="level66-medical-clinical-services-tab" tabindex="0">
                 <ul>
-                    <li>Bed Capacity, approximately above 500 beds</li>
                     <li>
-                        <strong>Core and Subspecialties</strong>
+                        <strong>Bed Capacity</strong>
                         <ul>
-                            <li>Internal Medicine (cardiology, neurology, nephrology, oncology, etc.)</li>
-                            <li>General Surgery</li>
-                            <li>Cardiothoracic Surgery</li>
-                            <li>Neurosurgery</li>
-                            <li>Orthopedic Surgery</li>
-                            <li>Obstetrics & Gynecology</li>
-                            <li>Pediatrics (including subspecialties)</li>
-                            <li>Anesthesiology</li>
-                            <li>Emergency Medicine</li>
+                            <li>Typically &gt; 250 beds, with major national centers ranging from 500 to 1,000+ beds</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Advanced National (CPA3+) Services </strong>
+                        <strong>Core and Advanced Specialties</strong>
                         <ul>
-                            <li>Organ transplantation (in selected centers)</li>
-                            <li>Cardiac surgery and catheterization laboratories</li>
-                            <li>Radiation oncology and advanced cancer care</li>
-                            <li>Dialysis and renal replacement therapy</li>
-                            <li>Advanced intensive care (ICU, NICU, CCU)</li>
+                            <li>Internal medicine</li>
+                            <li>Specialized surgery</li>
+                            <li>Obstetrics &amp; gynecology</li>
+                            <li>Pediatrics</li>
+                            <li>Distinct subspecialties (e.g., ophthalmology, oncology)</li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Surgical & Procedural Capacity </strong>
+                        <strong>Advanced Emergency &amp; Critical Care</strong>
                         <ul>
-                            <li>Complex and high-risk surgeries</li>
-                            <li>Multidisciplinary surgical procedures</li>
-                            <li>Advanced minimally invasive surgery</li>
+                            <li>24-hour emergency department with triage</li>
+                            <li>Intensive Care Units (ICU)</li>
+                            <li>
+                                Specialized resuscitation capabilities
+                                <ul>
+                                    <li>All staff are trained in Advanced Cardiac Life Support (ACLS)</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
+                        <strong>Surgical &amp; Interventional Capacity</strong>
                         <ul>
-                            <li>Imaging (X-ray, Ultrasound, CT Scan, MRI, PET-CT)</li>
-                            <li>Type A Laboratory <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
+                            <li>
+                                Major elective and emergency surgeries utilizing general anesthesia
+                                <ul>
+                                    <li>Fully-equipped operating theater</li>
+                                    <li>Post-anesthesia recovery area</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Teaching Hospital (National (CPA3+))
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Teaching Hospital is a National (CPA3+)-level hospital formally affiliated with medical universities, and is a center for medical education, specialist training, and clinical research. Teaching hospitals provide highly specialized care while simultaneously training undergraduate and postgraduate medical personnel.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Train medical students, interns, and specialist residents</li>
-                    <li>Provide advanced and subspecialty clinical services</li>
-                    <li>Conduct clinical research and academic activities</li>
-                    <li>National referral centers for complex cases</li>
-                </ul>
-            </p>
 
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
+                <h6 class="fw-bold mt-3">Diagnostic &amp; Support Infrastructure</h6>
                 <ul>
-                    <li>Bed Capacity, approximately above 500 beds</li>
                     <li>
-                        <strong>Core and Subspecialties</strong>
+                        <strong>Imaging</strong>
                         <ul>
-                            <li>Full range of medical and surgical specialties<li>
-                            <li>Extensive subspecialty departments across disciplines</li>
+                            <li>
+                                Advanced imagery
+                                <ul>
+                                    <li>Digital X-ray</li>
+                                    <li>Ultrasound</li>
+                                    <li>CT Scan</li>
+                                    <li>MRI</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="mt-2">
-                        <strong>Advanced National (CPA3+) Services </strong>
+                        <strong>Laboratory &amp; Blood Services</strong>
                         <ul>
-                            <li>Highly specialized procedures (e.g., complex oncology, neurosurgery)<li>
-                            <li>Multidisciplinary care teams</li>
-                            <li>Advanced ICU and critical care units</li>
+                            <li>Comprehensive 24/7 laboratory services with strict quality control.</li>
+                            <li>Operates a fully functioning Blood Bank for safe blood transfusion services.</li>
                         </ul>
                     </li>
-                    <li class="mt-2">
-                        <strong>Surgical & Procedural Capacity </strong>
-                        <ul>
-                            <li>Complex and high-risk surgeries</li>
-                            <li>Teaching-integrated surgical practice</li>
-                            <li>Multidisciplinary case management</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Imaging: X-ray, Ultrasound, CT Scan, MRI, Advanced imaging modalities</li>
-                            <li>Type A Laboratory <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                        </ul>
-                    </li>
+                    <li class="mt-2"><strong>Pharmacy:</strong> Comprehensive formulary management with robust cold chain logistics.</li>
                 </ul>
-            </p>
-            <p class="text-justify">
-                <b><u>Note:</u></b> Teaching Hospitals are inherently National (CPA3+) due to their academic function, full specialist coverage, and role in national referral and training systems.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Specialist Hospital (National (CPA3+))
-            </h5>
-            <h6 class="fw-bold">
-                <b>Overview</b>
-            </h6>
-            <p class="text-justify">
-                A Specialist Hospital is a National (CPA3+)-level facility focused on a specific field of medicine, including cardiology, orthopedics, oncology, or infectious diseases. Specialist hospitals provide highly specialized and advanced care within their domain and act as national referral centers for specific conditions.
-            </p>
-            <h6 class="fw-bold">
-                <b>Role</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Provide specialized care within a defined medical field</li>
-                    <li>National referral centers for specific diseases or procedures</li>
-                    <li>Support other hospitals with specialist expertise</li>
-                    <li>Contribute to advanced clinical practice and training</li>
-                </ul>
-            </p>
 
-            <h6 class="fw-bold">
-                <b>Clinical Services</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li>Bed Capacity, approximately 200 – 800+ beds (varies by specialty)</li>
-                    <li>
-                        <strong>Specialized Clinical Focus</strong>
-                        <ul>
-                            <li>Cardiology / Cardiothoracic services<li>
-                            <li>Oncology services</li>
-                            <li>Orthopedic and trauma services</li>
-                            <li>Infectious disease management</li>
-                            <li>Other specialty-specific services</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Advanced National (CPA3+) Services </strong>
-                        <ul>
-                            <li>Highly specialized procedures within the field</li>
-                            <li>Advanced disease-specific treatment protocols</li>
-                            <li>Specialized ICU units (e.g., cardiac ICU)</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Surgical & Procedural Capacity </strong>
-                        <ul>
-                           <li>Complex specialty-specific surgeries</li>
-                           <li>High-risk and advanced procedures</li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <strong>Diagnostic & Support Infrastructure</strong>
-                        <ul>
-                            <li>Imaging: CT Scan, MRI, Specialty-specific imaging systems</li>
-                            <li>Type A Laboratory <a href="{{ route('exurl') }}" target="_blank">(click here to see laboratory classifications)</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </p>
-            <p class="text-justify">
-                <b><u>Note:</u></b> Specialist Hospitals are classified as National (CPA3+) due to their highly specialized capability, advanced procedures, and national referral role, even though their scope is narrower than general hospitals.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                Cambodia GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Cambodia does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Cambodia, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-                As a result, a significant proportion of the population in Cambodia continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Cambodia</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Cambodia’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
-            </p>
+                <h5 class="fw-bold mt-4" style="color:#3c8dbc;">Cambodia Government Health System &amp; Financing</h5>
+                <p class="text-justify">
+                    Cambodia’s health system financing relies on a mix of government funding, donor support, and social health protection schemes, though Out-Of-Pocket (OOP) spending remains the largest source of health expenditure (accounting for approximately 60%). The government is actively expanding coverage to achieve Universal Health Coverage (UHC) through the following mechanisms:
+                </p>
+
+                <h6 class="fw-bold mt-3">Health Equity Funds (HEF)</h6>
+                <p class="text-justify">
+                    A critical social protection scheme designed to provide free access to public health services for the poorest and most vulnerable populations. The government or donors reimburse public facilities for the care provided to HEF beneficiaries, significantly reducing the barrier of cost for the poor at Health Centers and Referral Hospitals.
+                </p>
+
+                <h6 class="fw-bold mt-3">National Social Security Fund (NSSF)</h6>
+                <p class="text-justify">
+                    A contributory social health insurance scheme that primarily covers formal sector workers, civil servants, and veterans. NSSF finances employment injury benefits and broader health care services, contracting with both public and accredited private health facilities.
+                </p>
+
+                <h6 class="fw-bold mt-3">Out-Of-Pocket (OOP) Spending</h6>
+                <p class="text-justify">
+                    Despite expansion in HEF and NSSF, many Cambodians still rely heavily on OOP payments, primarily driven by a strong cultural preference for utilizing private clinics and pharmacies for initial care before transitioning to the public sector for more severe or prolonged illnesses.
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2458,8 +2148,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <strong>Police Category:</strong><br>
                 ${[
                     'National Police (HQ)',
-                    'Provincial Police Commissariat',
-                    'Municipality Police Inspectorate',
+                    'Provincial Police',
+                    'District Police',
                     'Commune Police Post',
                 ].map(cat => `
                     <label style="display:block;font-size:13px;">

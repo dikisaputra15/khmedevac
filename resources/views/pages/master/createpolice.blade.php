@@ -108,15 +108,15 @@
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input category-radio" type="radio" name="category" value="Provincial Police Commissariat" data-icon="{{ asset('images/Layer2.png') }}">
+                    <input class="form-check-input category-radio" type="radio" name="category" value="Provincial Police" data-icon="{{ asset('images/Layer2.png') }}">
                     <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                    <label class="form-check-label">Provincial Police Commissariat</label>
+                    <label class="form-check-label">Provincial Police</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input category-radio" type="radio" name="category" value="Municipality Police Inspectorate" data-icon="{{ asset('images/Layer3.png') }}">
+                    <input class="form-check-input category-radio" type="radio" name="category" value="District Police" data-icon="{{ asset('images/Layer3.png') }}">
                     <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                    <label class="form-check-label">Municipality Police Inspectorate</label>
+                    <label class="form-check-label">District Police</label>
                 </div>
 
                 <div class="form-check form-check-inline">
