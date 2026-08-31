@@ -2752,7 +2752,7 @@ document.addEventListener('change', function(e) {
                         <div class="facility-item">
                             <input class="form-check-input" type="checkbox" value="all" id="facilityAll">
                             <label class="form-check-label" for="facilityAll">
-                                <span class="facility-name is-all">All</span>
+                                <span class="facility-name is-all">All / Clear All</span>
                             </label>
                         </div>
                     </div>
