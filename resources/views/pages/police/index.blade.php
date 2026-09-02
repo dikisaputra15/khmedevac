@@ -1178,9 +1178,9 @@ function addPoliceMarkers(data) {
         const popupContent = `
             <h5>${itemName}</h5>
             <strong>Address:</strong>
-                ${police.location || 'N/A'}
-                ${police.city_name || 'N/A'}
-                ${police.district_name || 'N/A'}
+                ${police.location || 'N/A'},
+                ${police.city_name || 'N/A'},
+                ${police.district_name || 'N/A'},
                 ${police.province_name || 'N/A'}, Cambodia<br>
             <strong>Phone:</strong> ${police.telephone || 'N/A'}<br>
             <strong>Website:</strong> ${police.website || 'N/A'}<br>
