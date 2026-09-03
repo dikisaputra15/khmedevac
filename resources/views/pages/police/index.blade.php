@@ -551,24 +551,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <ol class="mb-3">
-            <li class="mb-3">
-                <strong>Strategic Command:</strong> The MOI provides the highest level of civilian authority and strategic direction over the CNP. Under the Minister, the Commissioner-General of the Cambodian National Police exercises nationwide command, formulates policing strategies, establishes operational priorities, allocates national resources, and ensures that policing activities support the Royal Government's internal security, public order, and crime control objectives.
-            </li>
-            <li class="mb-3" value="3">
-                <strong>Headquarters Command:</strong> The General Commissariat of National Police (GCNP) is the national headquarters of the CNP and functions as the principal command, coordination, and administrative body. Led by the Commissioner-General and supported by Deputy Commissioners-General, it develops operational policies, directs nationwide police operations, manages personnel and logistics, coordinates intelligence and inter-agency cooperation, and supervises both specialized departments and territorial police commands.
-            </li>
-            <li class="mb-3" value="4">
-                <strong>Functional Command:</strong> Functional command consists of the CNP's central departments, specialized police units, and national support services, each responsible for a specific policing function or technical capability. These include judicial policing, public order, border security, counterterrorism, anti-drug enforcement, criminal investigations, forensic science, international police cooperation, police training, communications, logistics, finance, personnel, and other specialized services. These units provide nationwide operational leadership, technical expertise, policy guidance, and specialized support to territorial police forces.
-            </li>
-            <li value="5">
-                <strong>Territorial Command:</strong> Territorial command comprises the 25 Provincial and Municipal Police Commissariats, District Police Inspectorates, and Commune Police Posts, which collectively deliver policing services throughout Cambodia. This command structure enables the CNP to implement national policies while responding effectively to local security needs through preventive patrols, criminal investigations, emergency response, public order management, and community policing. Territorial commanders remain operationally accountable to the Commissioner-General while maintaining close coordination with provincial and local government authorities within their respective jurisdictions.
-            </li>
-        </ol>
-        <p class="mb-0">
-            <strong>Source:</strong>
-            <a href="https://www.scribd.com/presentation/702873302/Lea-2-Cambodia" target="_blank" rel="noopener noreferrer">Lea 2 Cambodia</a>
-        </p>
+        <div class="modal-body image-modal-body">
+            <img src="{{ asset('images/police-layer.jpeg') }}" alt="Police Area Layer">
+        </div>
       </div>
     </div>
   </div>
@@ -585,7 +570,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body image-modal-body">
-            <img src="{{ asset('images/cmd-flow.png') }}" alt="Police Command Flow">
+            <img src="{{ asset('images/cmd-flow.jpeg') }}" alt="Police Command Flow">
       </div>
     </div>
   </div>
