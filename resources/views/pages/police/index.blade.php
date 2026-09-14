@@ -541,7 +541,7 @@
 </div>
 
 <div class="modal fade" id="policeAreaLayerModal" tabindex="-1" aria-labelledby="policeAreaLayerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:900px;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable police-area-layer-dialog">
     <div class="modal-content">
       <div class="modal-header py-2">
         <div class="d-flex align-items-center gap-2">
@@ -550,10 +550,8 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <div class="modal-body image-modal-body">
-            <img src="{{ asset('images/police-layer.jpeg') }}" alt="Police Area Layer">
-        </div>
+      <div class="modal-body p-0">
+        @include('pages.police.partials.area-layer')
       </div>
     </div>
   </div>
